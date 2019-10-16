@@ -170,5 +170,6 @@ The point of this image, as I've said, is to get you running asap as if it were 
 [Gentoo Pi Stage 4](stage4-gentoo-pi-2018-06-09.tar.bz2)
 
 [Old Gentoo Pi Stage 4](stage4-gentoo-pi-02-02-2016.tar.bz2)
-
+<!---
 #<a href"https:="" wiki.gentoo.org="" wiki="" raspberry_pi="" cross_building"="">How to set up Intel servers for distributed cross-compilation</a>
+--->
