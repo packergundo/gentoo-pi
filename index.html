@@ -5,7 +5,7 @@ Gentoo Pi
 <body>
 <h1>Gentoo Pi</h1>
 <script language="javascript">
-document.write("Just to let you know this site is active, this page was last updated on: " + document.lastModified +". I try to release images monthly.  Current image is 04-07-2018");
+document.write("Just to let you know this site is active, this page was last updated on: " + document.lastModified +". I try to release images monthly.  Current image is 06-09-2018");
 </script>
 <p>
 <i>Updated image 06-09-2018</i>
@@ -61,6 +61,10 @@ installed, as well as distcc. The system is up to date with portage and
 current build flags, which were inserted for a minimal headless system. A stage
 3 install does <b>not</b> have ntp, cron, syslog, or dhcp installed, all of
 which I wanted for headless image.
+
+<p>
+<i>cronie is now in the repo, and replaces vixie-cron -- drop in replacement. When I get the new image up it will reflect the change from vixie-cron to cronie.
+</i>
 
 <p>
 visudo, vipw, vigr....vim is now the preferred system editor. /etc/profile
