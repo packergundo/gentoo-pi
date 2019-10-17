@@ -159,17 +159,16 @@ www-servers/lighttpd
     changes in /etc files (update from 02-11-2018)
     misc updated packages and Portage files
 
-The Portage files that I use for this system (make.conf, package.use, package.mask, etc...) can be found [here](files/). If you want to keep your system current with my changes, download from here. I may set up a script to download and move these files...thoughts? I use Ansible for my home setup, but a simple Bash script would do.
+The Portage files that I use for this system (make.conf, package.use, package.mask, etc...) can be found [here](https://github.com/packergundo/gentoo-pi/blob/master/files). If you want to keep your system current with my changes, download from here. I may set up a script to download and move these files...thoughts? I use Ansible for my home setup, but a simple Bash script would do.
 
-The point of this image, as I've said, is to get you running asap as if it were a Raspian image. One caveat: if you want to compile yourself you'll need to make changes to /etc/portage/make.conf -- these are included and documented in the current [make.conf](files/make.conf).
+The point of this image, as I've said, is to get you running asap as if it were a Raspian image. One caveat: if you want to compile yourself you'll need to make changes to /etc/portage/make.conf -- these are included and documented in the current [make.conf](https://github.com/packergundo/gentoo-pi/blob/master/files/portage/make.conf).
 
-[Older Gentoo Pi Images](http://www.gundo.com/gentoo-pi/old_images/)
-
-[7-Zip](http://www.7-zip.org/) Needed to uncompress the image on Windows.
+[Older Gentoo Pi Images and Stage4 files](http://www.gundo.com/gentoo-pi/old_images/)
 
 [Gentoo Pi Stage 4](stage4-gentoo-pi-2018-06-09.tar.bz2)
 
-[Old Gentoo Pi Stage 4](stage4-gentoo-pi-02-02-2016.tar.bz2)
+[7-Zip](http://www.7-zip.org/) Needed to uncompress the image on Windows.
+
 <!---
 #<a href"https:="" wiki.gentoo.org="" wiki="" raspberry_pi="" cross_building"="">How to set up Intel servers for distributed cross-compilation</a>
 --->
