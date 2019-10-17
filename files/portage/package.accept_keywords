@@ -10,7 +10,7 @@ sys-process/at ~arm
 =net-misc/unison-2.48.4 ~arm
 =sys-kernel/raspberrypi-sources-4.14.9999 **
 media-sound/mpd
-sci-geosciences/gpsd ~arm
+#sci-geosciences/gpsd ~arm
 # required by inxi (argument)
 =sys-apps/inxi-2.3.56 ~arm
 # required by nethack (argument)
@@ -24,165 +24,57 @@ games-engines/frotz **
 =sys-auth/google-authenticator-1.05 ~arm
 # required by knock (argument)
 =net-misc/knock-0.7 **
-# required by virtual/python-pathlib-1.0::gentoo[python_targets_python2_7]
-# required by dev-python/ipython-5.8.0::gentoo
-# required by dev-python/netaddr-0.7.19::gentoo[cli]
-# required by app-admin/ansible-9999::gentoo
 # required by ansible (argument)
 =dev-python/pathlib-1.0.1-r1 ~arm
-# required by dev-python/ipython-5.8.0::gentoo[python_targets_python2_7]
-# required by dev-python/netaddr-0.7.19::gentoo[cli]
-# required by app-admin/ansible-9999::gentoo
-# required by ansible (argument)
 =dev-python/backports-shutil_get_terminal_size-1.0.0-r1 ~arm
-# required by dev-python/pickleshare-0.7.4-r1::gentoo[python_targets_python2_7]
-# required by dev-python/ipython-5.8.0::gentoo
-# required by dev-python/netaddr-0.7.19::gentoo[cli]
-# required by app-admin/ansible-9999::gentoo
-# required by ansible (argument)
 =dev-python/pathlib2-2.3.2 ~arm
-# required by dev-python/ipython-5.8.0::gentoo
-# required by dev-python/netaddr-0.7.19::gentoo[cli]
-# required by app-admin/ansible-9999::gentoo
-# required by ansible (argument)
 =virtual/python-pathlib-1.0 ~arm
-# required by dev-python/ipython-5.8.0::gentoo
-# required by dev-python/netaddr-0.7.19::gentoo[cli]
-# required by app-admin/ansible-9999::gentoo
-# required by ansible (argument)
 =dev-python/jedi-0.12.1 ~arm
-# required by dev-python/traitlets-4.3.2::gentoo
-# required by dev-python/ipython-5.8.0::gentoo
-# required by dev-python/netaddr-0.7.19::gentoo[cli]
-# required by app-admin/ansible-9999::gentoo
-# required by ansible (argument)
 =dev-python/ipython_genutils-0.2.0 ~arm
-# required by app-admin/ansible-9999::gentoo
-# required by ansible (argument)
 =net-misc/sshpass-1.06 ~arm
-# required by dev-python/prompt_toolkit-1.0.15::gentoo
-# required by dev-python/ipython-5.8.0::gentoo
-# required by dev-python/netaddr-0.7.19::gentoo[cli]
-# required by app-admin/ansible-9999::gentoo
-# required by ansible (argument)
 =dev-python/wcwidth-0.1.7-r1 ~arm
-# required by dev-python/jedi-0.12.1::gentoo
-# required by dev-python/ipython-5.8.0::gentoo
-# required by dev-python/netaddr-0.7.19::gentoo[cli]
-# required by app-admin/ansible-9999::gentoo
-# required by ansible (argument)
 =dev-python/parso-0.3.1 ~arm
-# required by app-admin/ansible-9999::gentoo
-# required by ansible (argument)
 =dev-python/netaddr-0.7.19 ~arm
-# required by dev-python/netaddr-0.7.19::gentoo[cli]
-# required by app-admin/ansible-9999::gentoo
-# required by ansible (argument)
 =dev-python/ipython-5.8.0 ~arm
-# required by dev-python/ipython-5.8.0::gentoo
-# required by dev-python/netaddr-0.7.19::gentoo[cli]
-# required by app-admin/ansible-9999::gentoo
-# required by ansible (argument)
 =dev-python/pickleshare-0.7.4-r1 ~arm
-# required by dev-python/ipython-5.8.0::gentoo
-# required by dev-python/netaddr-0.7.19::gentoo[cli]
-# required by app-admin/ansible-9999::gentoo
-# required by ansible (argument)
 =dev-python/prompt_toolkit-1.0.15 ~arm
-# required by dev-python/ipython-5.8.0::gentoo
-# required by dev-python/netaddr-0.7.19::gentoo[cli]
-# required by app-admin/ansible-9999::gentoo
-# required by ansible (argument)
 =dev-python/traitlets-4.3.2 ~arm
-# required by ansible (argument)
 =app-admin/ansible-2.6.5 **
+# required by ansible (argument)
 # required by mmv (argument)
 =app-misc/mmv-1.01b_p18 **
 # required by lastpass-cli (argument)
 =app-admin/lastpass-cli-1.3.1-r1 **
-# required by games-misc/fortune-mod-all-1::gentoo
-# required by fortune-mod-all (argument)
 =games-misc/fortune-mod-gentoo-dev-20090306 ~arm
-# required by games-misc/fortune-mod-all-1::gentoo
-# required by fortune-mod-all (argument)
 =games-misc/fortune-mod-strangelove-20041203 ~arm
-# required by games-misc/fortune-mod-all-1::gentoo
-# required by fortune-mod-all (argument)
 =games-misc/fortune-mod-starwars-0.1 ~arm
-# required by games-misc/fortune-mod-all-1::gentoo
-# required by fortune-mod-all (argument)
 =games-misc/fortune-mod-zx-error-1.0 ~arm
-# required by games-misc/fortune-mod-all-1::gentoo
-# required by fortune-mod-all (argument)
 =games-misc/fortune-mod-smac-0.1 ~arm
-# required by games-misc/fortune-mod-all-1::gentoo
-# required by fortune-mod-all (argument)
 =games-misc/fortune-mod-bofh-excuses-1.2 ~arm
-# required by games-misc/fortune-mod-all-1::gentoo
-# required by fortune-mod-all (argument)
 =games-misc/fortune-mod-osfortune-1 ~arm
-# required by games-misc/fortune-mod-all-1::gentoo
-# required by fortune-mod-all (argument)
 =games-misc/fortune-mod-calvin-0.1.1 ~arm
-# required by games-misc/fortune-mod-all-1::gentoo
-# required by fortune-mod-all (argument)
 =games-misc/fortune-mod-pqf-6.0 ~arm
-# required by fortune-mod-all (argument)
 =games-misc/fortune-mod-all-1 ~arm
-# required by games-misc/fortune-mod-all-1::gentoo
-# required by fortune-mod-all (argument)
 =games-misc/fortune-mod-futurama-0.2 ~arm
-# required by games-misc/fortune-mod-all-1::gentoo
-# required by fortune-mod-all (argument)
 =games-misc/fortune-mod-firefly-2.1.1 ~arm
-# required by games-misc/fortune-mod-all-1::gentoo
-# required by fortune-mod-all (argument)
 =games-misc/fortune-mod-homer-0.1 ~arm
-# required by games-misc/fortune-mod-all-1::gentoo
-# required by fortune-mod-all (argument)
 =games-misc/fortune-mod-sp-fortunes-0.2 ~arm
-# required by games-misc/fortune-mod-all-1::gentoo
-# required by fortune-mod-all (argument)
 =games-misc/fortune-mod-hitchhiker-0.1 ~arm
-# required by games-misc/fortune-mod-all-1::gentoo
-# required by fortune-mod-all (argument)
 =games-misc/fortune-mod-powerpuff-0.3 ~arm
-# required by games-misc/fortune-mod-all-1::gentoo
-# required by fortune-mod-all (argument)
 =games-misc/fortune-mod-familyguy-0.2 ~arm
-# required by games-misc/fortune-mod-all-1::gentoo
-# required by fortune-mod-all (argument)
 =games-misc/fortune-mod-chucknorris-0.1 ~arm
-# required by games-misc/fortune-mod-all-1::gentoo
-# required by fortune-mod-all (argument)
 =games-misc/fortune-mod-humorixfortunes-1.4-r1 ~arm
-# required by games-misc/fortune-mod-all-1::gentoo
-# required by fortune-mod-all (argument)
 =games-misc/fortune-mod-gentoo-forums-20041207 ~arm
-# required by games-misc/fortune-mod-all-1::gentoo
-# required by fortune-mod-all (argument)
 =games-misc/fortune-mod-dubya-20050118 ~arm
-# required by games-misc/fortune-mod-all-1::gentoo
-# required by fortune-mod-all (argument)
 =games-misc/fortune-mod-simpsons-chalkboard-0.1 ~arm
-# required by games-misc/fortune-mod-all-1::gentoo
-# required by fortune-mod-all (argument)
 =games-misc/fortune-mod-tao-1 ~arm
-# required by cowsay (argument)
 =games-misc/cowsay-3.03-r2 **
-# required by games-misc/fortune-mod-all-1::gentoo
-# required by fortune-mod-all (argument)
 =games-misc/fortune-mod-kernelcookies-9 ~arm
-# required by hping (argument)
 =net-analyzer/hping-3_pre20141226 ~arm
-# required by tcptraceroute (argument)
 =net-analyzer/tcptraceroute-1.5_beta7-r2 ~arm
-# required by tcping (argument)
 =net-analyzer/tcping-1.3.5 **
-# required by iftop (argument)
 =net-analyzer/iftop-1.0_pre4-r3 ~arm
-=net-irc/weechat-2.3 ~arm
-# required by atop (argument)
+=net-irc/weechat-2.5-r1 ~arm
 =sys-process/atop-2.3.0-r1 ~arm
 # required by whowatch (argument)
 =app-admin/whowatch-1.8.6 ~arm
