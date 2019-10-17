@@ -151,7 +151,9 @@ www-servers/lighttpd
 
 #### DOWNLOADS
 
-[Current Gentoo Pi Image](https://drive.google.com/file/d/1gj3jx8SdwutxV00-E5uE-SklLxklhX8b/view?usp=sharing) 6-09-2018 This will run on both the armv6 and armv7 Pis, but I compile for the armv6 for broader compatibility. Both kernels are available.
+[Current Gentoo Pi Image](https://drive.google.com/open?id=1APw7FH0Fshkh27sQnHzuGPoZDJdeAxzJ) 6-09-2018 This will run on both the armv6 and armv7 Pis, but I compile for the armv6 for broader compatibility. Both kernels are available.
+
+[Gentoo Pi Stage 4](https://drive.google.com/open?id=1gj3jx8SdwutxV00-E5uE-SklLxklhX8b)
 
     gcc 6.4.0-r1 (update from 02-11-2018)
     4.14 kernel
@@ -164,8 +166,6 @@ The Portage files that I use for this system (make.conf, package.use, package.ma
 The point of this image, as I've said, is to get you running asap as if it were a Raspian image. One caveat: if you want to compile yourself you'll need to make changes to /etc/portage/make.conf -- these are included and documented in the current [make.conf](https://github.com/packergundo/gentoo-pi/blob/master/files/portage/make.conf).
 
 [Older Gentoo Pi Images and Stage4 files](http://www.gundo.com/gentoo-pi/old_images/)
-
-[Gentoo Pi Stage 4](stage4-gentoo-pi-2018-06-09.tar.bz2)
 
 [7-Zip](http://www.7-zip.org/) Needed to uncompress the image on Windows.
 
