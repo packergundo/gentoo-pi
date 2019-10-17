@@ -20,7 +20,7 @@ ntp, vixie-cron, syslog-ng, dhcpcd, vim, and various gentoo utilities are all in
 
 _cronie is now in the repo, and replaces vixie-cron -- drop in replacement. When I get the new image up it will reflect the change from vixie-cron to cronie._
 
-visudo, vipw, vigr....vim is now the preferred system editor. /etc/profile will have to be edited if nano is preferred
+visudo, vipw, vigr....vim is now the preferred system editor. /etc/profile will have to be edited if nano is preferred _ed: this was a mistake, and eselelect editor will be used in the next image release_
 
 If you want to see what I installed: cat /var/lib/portage/world . Note that both images do have what was current at the time in /usr/portage -- why take the time to redownload it, especially with the tie it can take for a Pi. Since the image works best when you use my binary repo, /usr/portage contains what was used for the build on the date of the image.
 
