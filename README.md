@@ -2,7 +2,7 @@
 
 <!--- <script language="javascript">document.write("Just to let you know this site is active, this page was last updated on: " + document.lastModified +". I try to release images monthly. Current image is 06-09-2018");</script>
 --->
-_Updated image 06-09-2018_
+_Updated image 10-19-2019_
 
 The binaries are being maintained, just the base image is out of date. What this means is that an update will take longer at first. But everything _is_ being kept updated. The joy of Gentoo is that since it is versionless, all this means is that your initial upgrade will take a bit longer.
 
@@ -18,9 +18,7 @@ So...that is what I have set out to do. I have a working Gentoo Pi image, as **w
 
 ntp, vixie-cron, syslog-ng, dhcpcd, vim, and various gentoo utilities are all installed, as well as distcc. The system is up to date with portage and current build flags, which were inserted for a minimal headless system. A stage 3 install does **not** have ntp, cron, syslog, or dhcp installed, all of which I wanted for headless image.
 
-_cronie is now in the repo, and replaces vixie-cron -- drop in replacement. When I get the new image up it will reflect the change from vixie-cron to cronie._
-
-visudo, vipw, vigr....vim is now the preferred system editor. /etc/profile will have to be edited if nano is preferred _ed: this was a mistake, and eselelect editor will be used in the next image release_
+visudo, vipw, vigr....vim is now the preferred system editor. Use `eselect editor` if you want to revert back to nano.
 
 If you want to see what I installed: cat /var/lib/portage/world . Note that both images do have what was current at the time in /usr/portage -- why take the time to redownload it, especially with the tie it can take for a Pi. Since the image works best when you use my binary repo, /usr/portage contains what was used for the build on the date of the image.
 
@@ -71,12 +69,13 @@ app-portage/epm
 app-portage/g-cpan
 app-portage/gentoolkit
 dev-python/pip
+dev-vcs/git
 mail-mta/ssmtp
 media-sound/alsa-utils
 net-misc/dhcpcd
 net-misc/ntp
 sys-devel/distcc
-sys-process/vixie-cron
+sys-process/cronie
 </pre>
 
 g-cpan and pip are on the base system for for Perl and Python. Note that there are both Go and Ruby binaries now available
@@ -102,7 +101,6 @@ dev-lang/go
 dev-lang/php:5.6
 dev-lang/php
 dev-lang/ruby
-dev-vcs/git
 games-engines/frotz
 games-misc/bsd-games
 games-misc/cowsay
@@ -143,7 +141,6 @@ sys-devel/bc
 sys-kernel/raspberrypi-sources
 sys-process/at
 sys-process/atop
-sys-process/cronie
 sys-process/htop
 sys-process/lsof
 www-servers/lighttpd
@@ -151,7 +148,7 @@ www-servers/lighttpd
 
 #### DOWNLOADS
 
-[Current Gentoo Pi Image](https://drive.google.com/open?id=1APw7FH0Fshkh27sQnHzuGPoZDJdeAxzJ) 6-09-2018 This will run on both the armv6 and armv7 Pis, but I compile for the armv6 for broader compatibility. Both kernels are available.
+[Current Gentoo Pi Image](https://drive.google.com/open?id=1His8pEqdKM1j8BI_nrWdi5Y65z7yLY4G) 10-19-2019 This will run on both the armv6 and armv7 Pis, but I compile for the armv6 for broader compatibility. Both kernels are available.
 
 [Gentoo Pi Stage 4](https://drive.google.com/open?id=1gj3jx8SdwutxV00-E5uE-SklLxklhX8b)
 
