@@ -16,7 +16,7 @@ In my opinion, a working Gentoo base system needed to function the same way. It 
 
 So...that is what I have set out to do. I have a working Gentoo Pi image, as **well** as a working Gentoo Pi Stage 4\. The stage 4 contains all the software that is on the image, but works if you don't want to copy the image over yourself, but would rather untar it to an already built card.
 
-ntp, vixie-cron, syslog-ng, dhcpcd, vim, and various gentoo utilities are all installed, as well as distcc. The system is up to date with portage and current build flags, which were inserted for a minimal headless system. A stage 3 install does **not** have ntp, cron, syslog, or dhcp installed, all of which I wanted for headless image.
+ntp, cronie, syslog-ng, dhcpcd, vim, and various gentoo utilities are all installed, as well as distcc. The system is up to date with portage and current build flags, which were inserted for a minimal headless system. A stage 3 install does **not** have ntp, cron, syslog, or dhcp installed, all of which I wanted for a headless image.
 
 visudo, vipw, vigr....vim is now the preferred system editor. Use `eselect editor` if you want to revert back to nano.
 
