@@ -152,10 +152,12 @@ www-servers/lighttpd
 
 [Gentoo Pi Stage 4](https://drive.google.com/open?id=1gj3jx8SdwutxV00-E5uE-SklLxklhX8b)
 
-    gcc 6.4.0-r1 (update from 02-11-2018)
+    sys-devel/gcc-8.3.0-r1 (added to 10-18-2019)
+    sys-devel/gcc-7.3.0-r3 (added to 10-18-2019)
+    sys-devel/gcc-6.4.0-r1
     4.14 kernel
     armv6 build
-    changes in /etc files (update from 02-11-2018)
+    changes in /etc files (corrected /etc/profile error)
     misc updated packages and Portage files
 
 The Portage files that I use for this system (make.conf, package.use, package.mask, etc...) can be found [here](https://github.com/packergundo/gentoo-pi/blob/master/files/portage). If you want to keep your system current with my changes, download from here. I may set up a script to download and move these files...thoughts? I use Ansible for my home setup, but a simple Bash script would do.
