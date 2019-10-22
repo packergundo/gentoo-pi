@@ -18,4 +18,4 @@ app-portage/layman sync-plugin-portage git
 # required by ansible (argument)
 >=dev-lang/python-3.6.5 sqlite
 net-irc/weechat PYTHON_SINGLE_TARGET: -* python2_7
-
+mail-client/roundcube sqlite change-password
