@@ -4,4 +4,9 @@
 # Andreas Sturmlechner <asturm@gentoo.org> (15 Jul 2018)
 # Old ICU is unsupported. ICU 58 only remains for 13.0 based profiles.
 =dev-libs/icu-58.2-r1
+# required by @__auto_slot_operator_replace_installed__ (argument)
+# /usr/portage/profiles/package.mask:
+# Brian Evans <grknight@gentoo.org> (2019-10-01)
+# End of life.  Please upgrade.
+# Removal in 90 days. Bug 651784
 =dev-lang/php-5.6.40-r6
