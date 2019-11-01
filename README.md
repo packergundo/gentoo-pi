@@ -51,7 +51,7 @@ If you are using the Stage 4 a FAT boot partition, a swap partition, and an ext4
 
 umount the SD card, insert, and boot. At this point the instructions for Stage 4 and the image are very similar.
 
-If you copied the image onto an sd card, `sudo fdisk /dev/mmcblk0`, delete the 3rd partition, and build it again with the entire file system. Reboot the Pi, and then run `resize2fs /dev/mmcblk0p3`. You will now have your entire SD card available.
+If you copied the image onto an sd card, `sudo fdisk /dev/mmcblk0`, delete the 3rd partition, and build it again with the entire file system. Reboot the Pi, and then run `sudo resize2fs /dev/mmcblk0p3`. You will now have your entire SD card available.
 
 The latest image points to my build server, and these are the binaries that are available and maintaned. If there is a binary that you need and don't want to build, let me know and I will be glad to compile and add it to my list.
 
