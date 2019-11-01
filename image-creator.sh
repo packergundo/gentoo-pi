@@ -15,13 +15,14 @@ BASEDIR=/home/gentoo-pi
 #BOOT=$11
 #GENTOO=$13
 
-dd if=$1 bs=1M count=3600 of=$IMAGE
+dd if=$1 bs=1M count=4000 of=$IMAGE
 
 losetup -P /dev/loop0 $IMAGE
 mount /dev/loop0p3 /mnt/gentoo
 mount /dev/loop0p1 /mnt/gentoo/boot
 rm -rf /mnt/gentoo/home/gundo
 rm -rf /mnt/gentoo/usr/portage/packages/*
+rm -rf /root/*
 cp $BASEDIR/files/passwd /mnt/gentoo/etc/passwd
 cp $BASEDIR/files/shadow /mnt/gentoo/etc/shadow
 cp $BASEDIR/files/group /mnt/gentoo/etc/group

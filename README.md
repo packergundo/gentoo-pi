@@ -1,10 +1,13 @@
 # Gentoo Pi
 
-<!--- <script language="javascript">document.write("Just to let you know this site is active, this page was last updated on: " + document.lastModified +". I try to release images monthly. Current image is 06-09-2018");</script>
+<!---
+<script language="javascript">document.write("Just to let you know this site is active, this page was last updated on: " + document.lastModified +". I try to release images monthly. Current image is 06-09-2018");</script>
 --->
-_Updated image 10-19-2019_
+_Updated image 10-31-2019, kernel update_
 
+<!---
 The binaries are being maintained, just the base image is out of date. What this means is that an update will take longer at first. But everything _is_ being kept updated. The joy of Gentoo is that since it is versionless, all this means is that your initial upgrade will take a bit longer.
+--->
 
 I've played around with the Raspberry Pi for years, and use it in many different ways at home and at work. At home, I have a Pi as my GPS time server, as my music server, as an IRC server, a web server...I think you get the hint. But up until now, I've been running Raspbian as my OS. It was the recommended OS when I started, and I didn't want to deal with any growing pains.
 
@@ -148,17 +151,24 @@ www-servers/lighttpd
 
 #### DOWNLOADS
 
-[Current Gentoo Pi Image](https://drive.google.com/open?id=1His8pEqdKM1j8BI_nrWdi5Y65z7yLY4G) 10-19-2019 This will run on both the armv6 and armv7 Pis, but I compile for the armv6 for broader compatibility. Both kernels are available.
+[Current Gentoo Pi Image](https://drive.google.com/open?id=1CC1d2F4FhGMQBeMz4AASNVpmiz4jTLwC) 10-31-2019 This will run on both the armv6 and armv7 Pis, but I compile for the armv6 for broader compatibility. Both kernels are available.
 
-[Gentoo Pi Stage 4](https://drive.google.com/open?id=1gj3jx8SdwutxV00-E5uE-SklLxklhX8b)
+[Gentoo Pi Stage 4](https://drive.google.com/open?id=1PZQjNTWKcaDgoqKxUmmyUQQUuY3ysRVs) 10-31-2019
 
-    sys-devel/gcc-8.3.0-r1 (added to 10-18-2019)
-    sys-devel/gcc-7.3.0-r3 (added to 10-18-2019)
-    sys-devel/gcc-6.4.0-r1
-    4.14 kernel
+    kernel upgrade to 4.19.80
+    sshguard is installed in world and the necessary rules in iptables
+    configuration proto for static ip is in /etc/conf.d/net
+    comment out the agetty in inittab (reverted earlier mistake)
+    added git to world
+    pam upgrade complete, removing virtual/pam
+    removed vixie-cron
+    iptables runs on start
+    current compiler is gcc-8.3.0-r1 (added to 10-18-2019)
+    removed sys-devel/gcc-7.3.0-r3
+    removed sys-devel/gcc-6.4.0-r1
     armv6 build
-    changes in /etc files (corrected /etc/profile error)
-    misc updated packages and Portage files
+    /usr/local/portage/ added
+    build script added in /home/pi directory
 
 The Portage files that I use for this system (make.conf, package.use, package.mask, etc...) can be found [here](https://github.com/packergundo/gentoo-pi/blob/master/files/portage). If you want to keep your system current with my changes, download from here. I may set up a script to download and move these files...thoughts? I use Ansible for my home setup, but a simple Bash script would do.
 

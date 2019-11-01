@@ -10,3 +10,4 @@
 # End of life.  Please upgrade.
 # Removal in 90 days. Bug 651784
 =dev-lang/php-5.6.40-r6
+=app-admin/sshguard-2.3.1
