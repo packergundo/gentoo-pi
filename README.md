@@ -5,6 +5,8 @@
 --->
 _Updated image 10-31-2019, kernel update_
 
+Okay...I now have a manual kernel update to download at the bottom of the page. Process to do this...download it. Move it to `/`. `sudo su -`...you _need_ to be root. `mount /boot` -- at this point I recommend making a backup of `/boot` just in case. Then `tar -xvzf <downloaded file>`. It will overwrite /boot, except for `cmdline.txt` and `config.txt` (you _did_ back it up, right?) and install the new modules files in `/lib/modules`. Reboot, and you should have the new kernel. You can delete the downloaded file, your backup, and then all the old kernel modules if you want.
+
 <!---
 The binaries are being maintained, just the base image is out of date. What this means is that an update will take longer at first. But everything _is_ being kept updated. The joy of Gentoo is that since it is versionless, all this means is that your initial upgrade will take a bit longer.
 --->
@@ -179,6 +181,8 @@ www-servers/lighttpd
     armv6 build
     /usr/local/portage/ added
     build script added in /home/pi directory
+
+[4.19.80 kernel tarball](https://drive.google.com/open?id=1Etn-oEKjhxy1S4yN1JVpRi5xVl6oUua4}
 
 The Portage files that I use for this system (make.conf, package.use, package.mask, etc...) can be found [here](https://github.com/packergundo/gentoo-pi/blob/master/files/portage). If you want to keep your system current with my changes, download from here. I may set up a script to download and move these files...thoughts? I use Ansible for my home setup, but a simple Bash script would do.
 
