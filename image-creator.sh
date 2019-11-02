@@ -22,7 +22,8 @@ mount /dev/loop0p3 /mnt/gentoo
 mount /dev/loop0p1 /mnt/gentoo/boot
 rm -rf /mnt/gentoo/home/gundo
 rm -rf /mnt/gentoo/usr/portage/packages/*
-rm -rf /root/*
+rm -rf /mnt/gentoo/root/*
+rm -rf /mnt/gentoo/var/log/*.gz
 cp $BASEDIR/files/passwd /mnt/gentoo/etc/passwd
 cp $BASEDIR/files/shadow /mnt/gentoo/etc/shadow
 cp $BASEDIR/files/group /mnt/gentoo/etc/group

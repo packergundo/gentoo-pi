@@ -62,6 +62,7 @@ The next thing on my todo list is to build a desktop system, both a base system,
 On the base system...
 
 <pre>app-admin/logrotate
+app-admin/sshguard
 app-admin/sudo
 app-admin/syslog-ng
 app-editors/nano
@@ -71,6 +72,7 @@ app-portage/eix
 app-portage/epm
 app-portage/g-cpan
 app-portage/gentoolkit
+app-portage/portage-utils
 dev-python/pip
 dev-vcs/git
 mail-mta/ssmtp
@@ -87,18 +89,24 @@ And in the repo...
 
 <pre>app-admin/ansible
 app-admin/lastpass-cli
-app-admin/sshguard
+app-admin/restart-services
 app-admin/whowatch
 app-crypt/gnupg
-app-editors/joe
 app-editors/emacs
+app-editors/joe
 app-misc/mmv
 app-misc/screenie
 app-portage/genlop
 app-portage/layman
 app-portage/pfl
+app-portage/repoman
 app-portage/ufed
 app-shells/tcsh
+app-shells/zsh
+cross-i686-pc-linux-gnu/binutils
+cross-i686-pc-linux-gnu/gcc
+cross-i686-pc-linux-gnu/glibc
+cross-i686-pc-linux-gnu/linux-headers
 dev-java/oracle-jdk-bin
 dev-lang/go
 dev-lang/php:5.6
@@ -111,10 +119,10 @@ games-misc/fortune-mod-all
 games-roguelike/nethack
 mail-client/mailx
 mail-client/mutt
+mail-client/roundcube
 mail-mta/postfix
 media-sound/mpd
 media-sound/mpg123
-net-analyzer/gnu-netcat
 net-analyzer/hping
 net-analyzer/iftop
 net-analyzer/netcat
@@ -129,6 +137,7 @@ net-im/pidgin
 net-irc/irssi
 net-irc/weechat
 net-libs/nodejs
+net-mail/dovecot
 net-misc/knock
 net-misc/oidentd
 net-misc/unison
@@ -141,6 +150,7 @@ sys-apps/mlocate
 sys-apps/usbutils
 sys-auth/google-authenticator
 sys-devel/bc
+sys-devel/crossdev
 sys-kernel/raspberrypi-sources
 sys-process/at
 sys-process/atop
