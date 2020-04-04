@@ -1,5 +1,5 @@
 app-eselect/eselect-java ~arm
-=dev-java/oracle-jdk-bin-1.8.0.162 ~arm
+=dev-java/oracle-jdk-bin-1.8.0.202 ~arm
 =dev-java/oracle-jdk-bin-1.8.0.181 ~arm
 sys-apps/baselayout-java ~arm
 dev-java/java-config ~arm
@@ -44,29 +44,29 @@ games-engines/frotz **
 =app-misc/mmv-1.01b_p18 **
 # required by lastpass-cli (argument)
 =app-admin/lastpass-cli-1.3.1-r1 **
-=games-misc/fortune-mod-gentoo-dev-20090306 ~arm
-=games-misc/fortune-mod-strangelove-20041203 ~arm
-=games-misc/fortune-mod-starwars-0.1 ~arm
-=games-misc/fortune-mod-zx-error-1.0 ~arm
-=games-misc/fortune-mod-smac-0.1 ~arm
-=games-misc/fortune-mod-bofh-excuses-1.2 ~arm
-=games-misc/fortune-mod-osfortune-1 ~arm
-=games-misc/fortune-mod-calvin-0.1.1 ~arm
-=games-misc/fortune-mod-pqf-6.0 ~arm
-=games-misc/fortune-mod-all-1 ~arm
-=games-misc/fortune-mod-futurama-0.2 ~arm
-=games-misc/fortune-mod-firefly-2.1.1 ~arm
-=games-misc/fortune-mod-homer-0.1 ~arm
-=games-misc/fortune-mod-sp-fortunes-0.2 ~arm
-=games-misc/fortune-mod-hitchhiker-0.1 ~arm
-=games-misc/fortune-mod-powerpuff-0.3 ~arm
-=games-misc/fortune-mod-familyguy-0.2 ~arm
-=games-misc/fortune-mod-chucknorris-0.1 ~arm
-=games-misc/fortune-mod-humorixfortunes-1.4-r1 ~arm
-=games-misc/fortune-mod-gentoo-forums-20041207 ~arm
-=games-misc/fortune-mod-dubya-20050118 ~arm
-=games-misc/fortune-mod-simpsons-chalkboard-0.1 ~arm
-=games-misc/fortune-mod-tao-1 ~arm
+games-misc/fortune-mod-gentoo-dev ~arm
+games-misc/fortune-mod-strangelove ~arm
+games-misc/fortune-mod-starwars ~arm
+games-misc/fortune-mod-zx-error ~arm
+games-misc/fortune-mod-smac ~arm
+games-misc/fortune-mod-bofh-excuses ~arm
+games-misc/fortune-mod-osfortune ~arm
+games-misc/fortune-mod-calvin ~arm
+games-misc/fortune-mod-pqf ~arm
+games-misc/fortune-mod-all ~arm
+games-misc/fortune-mod-futurama ~arm
+games-misc/fortune-mod-firefly ~arm
+games-misc/fortune-mod-homer ~arm
+games-misc/fortune-mod-sp-fortunes ~arm
+games-misc/fortune-mod-hitchhiker ~arm
+games-misc/fortune-mod-powerpuff ~arm
+games-misc/fortune-mod-familyguy ~arm
+games-misc/fortune-mod-chucknorris ~arm
+games-misc/fortune-mod-humorixfortunes ~arm
+games-misc/fortune-mod-gentoo-forums ~arm
+games-misc/fortune-mod-dubya ~arm
+games-misc/fortune-mod-simpsons-chalkboard ~arm
+games-misc/fortune-mod-tao ~arm
 =games-misc/cowsay-3.03-r2 **
 =games-misc/fortune-mod-kernelcookies-9 ~arm
 =net-analyzer/hping-3_pre20141226 ~arm
@@ -82,3 +82,22 @@ games-engines/frotz **
 # required by @world (argument)
 =dev-util/meson-0.49.2 ~arm
 =app-admin/sshguard-2.3.1 ~arm
+=www-apache/anyterm-1.1.29-r1 **
+dev-python/pyusb ~arm
+
+=app-metrics/node_exporter-0.18.1 **
+>=dev-util/promu-0.3.0 **
+net-analyzer/speedtest-cli ~arm
+######### old package.keywords
+
+cross-i686-pc-linux-gnu/binutils x86 -arm -~arm
+cross-i686-pc-linux-gnu/gcc x86 -arm -~arm
+cross-i686-pc-linux-gnu/linux-headers x86 -arm -~arm
+cross-i686-pc-linux-gnu/glibc x86 -arm -~arm
+cross-i686-pc-linux-gnu/gdb x86 ~x86 -arm -~arm
+# required by restart-services (argument)
+=app-admin/lib_users-0.13 ~arm
+=app-admin/restart-services-0.14.4 **
+
+=dev-java/icedtea-3.13.0 ~arm
+=app-metrics/node_exporter-0.18.1 ~arm

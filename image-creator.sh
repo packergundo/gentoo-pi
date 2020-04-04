@@ -15,15 +15,19 @@ BASEDIR=/home/gentoo-pi
 #BOOT=$11
 #GENTOO=$13
 
+echo "dding .img file from SD card..."
 dd if=$1 bs=1M count=4000 of=$IMAGE
 
+echo "Mounting image..."
 losetup -P /dev/loop0 $IMAGE
 mount /dev/loop0p3 /mnt/gentoo
 mount /dev/loop0p1 /mnt/gentoo/boot
+echo "Removing unnecessary stuff..."
 rm -rf /mnt/gentoo/home/gundo
 rm -rf /mnt/gentoo/usr/portage/packages/*
 rm -rf /mnt/gentoo/root/*
 rm -rf /mnt/gentoo/var/log/*.gz
+echo "Overwriting stuff..."
 cp $BASEDIR/files/passwd /mnt/gentoo/etc/passwd
 cp $BASEDIR/files/shadow /mnt/gentoo/etc/shadow
 cp $BASEDIR/files/group /mnt/gentoo/etc/group
@@ -36,9 +40,12 @@ rm /mnt/gentoo/etc/group-
 rm /mnt/gentoo/etc/gshadow-
 rm /mnt/gentoo/etc/passwd-
 
+echo "Creating stage4..."
 cd /mnt/gentoo
 $BASEDIR/mkstage4.sh -q -l -t . $BASEDIR/$STAGE4
 cd $BASEDIR
+echo "Unmounting image..."
 umount /mnt/gentoo/boot
 umount /mnt/gentoo
 losetup -D
+echo "Done!!!"

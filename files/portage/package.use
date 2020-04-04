@@ -19,3 +19,7 @@ app-portage/layman sync-plugin-portage git
 >=dev-lang/python-3.6.5 sqlite
 net-irc/weechat PYTHON_SINGLE_TARGET: -* python2_7
 mail-client/roundcube sqlite change-password
+dev-java/icedtea -webstart -cups
+app-text/ghostscript-gpl cups
+sys-apps/util-linux caps
+net-fs/samba -gpg
