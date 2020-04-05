@@ -173,7 +173,7 @@ www-servers/lighttpd
     default Python changed to 3.6.x
     Perl updated to 5.30.1
 
-[4.19.80 kernel tarball](https://drive.google.com/open?id=1Etn-oEKjhxy1S4yN1JVpRi5xVl6oUua4}
+[4.19.80 kernel tarball](https://drive.google.com/file/d/1Etn-oEKjhxy1S4yN1JVpRi5xVl6oUua4/view?usp=sharing)
 
 The Portage files that I use for this system (make.conf, package.use, package.mask, etc...) can be found [here](https://github.com/packergundo/gentoo-pi/blob/master/files/portage). If you want to keep your system current with my changes, download from here. I may set up a script to download and move these files...thoughts? I use Ansible for my home setup, but a simple Bash script would do.
 
