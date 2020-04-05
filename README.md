@@ -3,7 +3,7 @@
 <!---
 <script language="javascript">document.write("Just to let you know this site is active, this page was last updated on: " + document.lastModified +". I try to release images monthly. Current image is 06-09-2018");</script>
 --->
-_Updated image 10-31-2019, kernel update_
+_Updated image 04-04-2020, Perl, Python, and gcc changes_
 
 Okay...I now have a manual kernel update to download at the bottom of the page. Process to do this...download it. Move it to `/`. `sudo su -`...you _need_ to be root. `mount /boot` -- at this point I recommend making a backup of `/boot` just in case. Then `tar -xvzf <downloaded file>`. It will overwrite /boot, except for `cmdline.txt` and `config.txt` (you _did_ back it up, right?) and install the new modules files in `/lib/modules`. Reboot, and you should have the new kernel. You can delete the downloaded file, your backup, and then all the old kernel modules if you want.
 
@@ -96,6 +96,7 @@ app-admin/whowatch
 app-crypt/gnupg
 app-editors/emacs
 app-editors/joe
+app-metrics/node_exporter
 app-misc/mmv
 app-misc/screenie
 app-portage/genlop
@@ -105,15 +106,13 @@ app-portage/repoman
 app-portage/ufed
 app-shells/tcsh
 app-shells/zsh
-cross-i686-pc-linux-gnu/binutils
-cross-i686-pc-linux-gnu/gcc
-cross-i686-pc-linux-gnu/glibc
-cross-i686-pc-linux-gnu/linux-headers
 dev-java/oracle-jdk-bin
 dev-lang/go
 dev-lang/php:5.6
 dev-lang/php
 dev-lang/ruby
+app-portage/portage-utils
+dev-python/pyusb
 games-engines/frotz
 games-misc/bsd-games
 games-misc/cowsay
@@ -129,6 +128,7 @@ net-analyzer/hping
 net-analyzer/iftop
 net-analyzer/netcat
 net-analyzer/nmap
+net-analyzer/speedtest-cli
 net-analyzer/tcping
 net-analyzer/tcptraceroute
 net-analyzer/traceroute
@@ -158,29 +158,20 @@ sys-process/at
 sys-process/atop
 sys-process/htop
 sys-process/lsof
+www-apache/anyterm
 www-servers/lighttpd
 </pre>
 
 #### DOWNLOADS
 
-[Current Gentoo Pi Image](https://drive.google.com/open?id=1CC1d2F4FhGMQBeMz4AASNVpmiz4jTLwC) 10-31-2019 This will run on both the armv6 and armv7 Pis, but I compile for the armv6 for broader compatibility. Both kernels are available.
+[Current Gentoo Pi Image](https://drive.google.com/file/d/1VbQC7eR2CWWJlt3Jl8p8QviIpFR3yPzQ/view?usp=sharing) 04-04-2020 This will run on both the armv6 and armv7 Pis, but I compile for the armv6 for broader compatibility. Both kernels are available.
 
-[Gentoo Pi Stage 4](https://drive.google.com/open?id=1PZQjNTWKcaDgoqKxUmmyUQQUuY3ysRVs) 10-31-2019
+[Gentoo Pi Stage 4](https://drive.google.com/file/d/1d39URZOVtdjJiQEMwJN3BPsEBAiWIq9h/view?usp=sharing) 04-04-2020
 
     kernel upgrade to 4.19.80
-    sshguard is installed in world and the necessary rules in iptables
-    configuration proto for static ip is in /etc/conf.d/net
-    comment out the agetty in inittab (reverted earlier mistake)
-    added git to world
-    pam upgrade complete, removing virtual/pam
-    removed vixie-cron
-    iptables runs on start
-    current compiler is gcc-8.3.0-r1 (added to 10-18-2019)
-    removed sys-devel/gcc-7.3.0-r3
-    removed sys-devel/gcc-6.4.0-r1
-    armv6 build
-    /usr/local/portage/ added
-    build script added in /home/pi directory
+    current compiler upgraded to gcc-9.2.0-r2
+    default Python changed to 3.6.x
+    Perl updated to 5.30.1
 
 [4.19.80 kernel tarball](https://drive.google.com/open?id=1Etn-oEKjhxy1S4yN1JVpRi5xVl6oUua4}
 
