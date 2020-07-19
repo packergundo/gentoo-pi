@@ -1,25 +1,30 @@
 mail-mta/postfix sasl
 www-servers/lighttpd php
-dev-lang/php cgi calendar cli crypt curl curlwrappers debug embed exif fileinfo filter flatfile gd hash iconv imap inifile intl json mhash odbc pdo phar phpdbg session simplexml sockets sqlite ssltidy tokenizer truetype unicode xml xmlreader xmlrpc xmlwriter xpm xslt zip zlib
+dev-lang/php cgi calendar cli crypt curl curlwrappers debug embed exif fileinfo filter flatfile gd hash iconv imap inifile intl json mhash odbc pdo phar phpdbg session simplexml sockets sqlite ssltidy tokenizer truetype unicode xml xmlreader xmlrpc xmlwriter xpm xslt zip zlib mysql apache2
 sys-devel/distcc crossdev
 mail-client/mutt sidebar imap gpg berkdb hcache -gdbm
 net-im/pidgin -gstreamer -gtk -sasl -xscreensaver
 media-sound/mpd -ffmpeg
 net-dns/bind dlz
 app-portage/layman sync-plugin-portage git
+app-eselect/eselect-php apache2
 # required by dev-python/ipython-5.8.0::gentoo[python_targets_python2_7]
 # required by dev-python/netaddr-0.7.19::gentoo[cli]
 # required by app-admin/ansible-9999::gentoo
 # required by ansible (argument)
->=dev-lang/python-2.7.15:2.7 sqlite
+dev-lang/python sqlite
 # required by dev-python/ipython-5.8.0::gentoo[python_targets_python3_6]
 # required by dev-python/netaddr-0.7.19::gentoo[cli]
 # required by app-admin/ansible-9999::gentoo
 # required by ansible (argument)
->=dev-lang/python-3.6.5 sqlite
 net-irc/weechat PYTHON_SINGLE_TARGET: -* python2_7
 mail-client/roundcube sqlite change-password
 dev-java/icedtea -webstart -cups
 app-text/ghostscript-gpl cups
 sys-apps/util-linux caps
 net-fs/samba -gpg
+# required by app-admin/ansible-2.9.7::gentoo
+>=dev-python/certifi-2019.11.28 python_targets_python3_6
+>=dev-python/pyyaml-5.3.1 python_targets_python3_6
+>=dev-python/cython-0.29.15 python_targets_python3_6
+>=dev-python/setuptools-44.1.0 python_targets_python3_6

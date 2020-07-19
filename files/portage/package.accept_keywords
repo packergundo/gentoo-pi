@@ -28,17 +28,18 @@ games-engines/frotz **
 =dev-python/backports-shutil_get_terminal_size-1.0.0-r1 ~arm
 =dev-python/pathlib2-2.3.2 ~arm
 =virtual/python-pathlib-1.0 ~arm
-=dev-python/jedi-0.12.1 ~arm
+=dev-python/jedi-0.17.0 ~arm
 =dev-python/ipython_genutils-0.2.0 ~arm
 =net-misc/sshpass-1.06 ~arm
 =dev-python/wcwidth-0.1.7-r1 ~arm
-=dev-python/parso-0.3.1 ~arm
+=dev-python/parso-0.6.2 ~arm
 =dev-python/netaddr-0.7.19 ~arm
-=dev-python/ipython-5.8.0 ~arm
+=dev-python/backcall-0.1.0-r1 ~arm
+=dev-python/ipython-7.5.0 ~arm
 =dev-python/pickleshare-0.7.4-r1 ~arm
-=dev-python/prompt_toolkit-1.0.15 ~arm
+=dev-python/prompt_toolkit-2.0.10 ~arm
 =dev-python/traitlets-4.3.2 ~arm
-=app-admin/ansible-2.6.5 **
+=app-admin/ansible-2.9.7 **
 # required by ansible (argument)
 # required by mmv (argument)
 =app-misc/mmv-1.01b_p18 **
@@ -96,8 +97,14 @@ cross-i686-pc-linux-gnu/linux-headers x86 -arm -~arm
 cross-i686-pc-linux-gnu/glibc x86 -arm -~arm
 cross-i686-pc-linux-gnu/gdb x86 ~x86 -arm -~arm
 # required by restart-services (argument)
-=app-admin/lib_users-0.13 ~arm
-=app-admin/restart-services-0.14.4 **
+app-admin/lib_users ~arm
+=app-admin/restart-services-0.14.1 **
 
-=dev-java/icedtea-3.13.0 ~arm
+dev-java/icedtea ~arm
+dev-java/openjdk-bin ~arm
+dev-java/openjdk ~arm
+dev-libs/libffi-compat ~arm
 =app-metrics/node_exporter-0.18.1 ~arm
+app-backup/tarsnap ~arm
+
+media-radio/svxlink ~arm
