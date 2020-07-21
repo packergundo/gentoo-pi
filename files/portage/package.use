@@ -24,7 +24,9 @@ app-text/ghostscript-gpl cups
 sys-apps/util-linux caps
 net-fs/samba -gpg
 # required by app-admin/ansible-2.9.7::gentoo
->=dev-python/certifi-2019.11.28 python_targets_python3_6
->=dev-python/pyyaml-5.3.1 python_targets_python3_6
->=dev-python/cython-0.29.15 python_targets_python3_6
->=dev-python/setuptools-44.1.0 python_targets_python3_6
+#>=dev-python/certifi-2019.11.28 python_targets_python3_6
+#>=dev-python/pyyaml-5.3.1 python_targets_python3_6
+#>=dev-python/cython-0.29.15 python_targets_python3_6
+#>=dev-python/setuptools-44.1.0 python_targets_python3_6
+
+dev-python/pygments python_targets_python2_7

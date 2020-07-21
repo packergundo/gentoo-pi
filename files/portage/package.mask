@@ -85,3 +85,5 @@
 <dev-perl/YAML-1.150.0
 <dev-perl/libintl-perl-1.310.0
 <dev-perl/libwww-perl-6.270.0
+
+<dev-python/pygments-2.6.1
