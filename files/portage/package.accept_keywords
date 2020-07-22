@@ -108,3 +108,6 @@ dev-libs/libffi-compat ~arm
 app-backup/tarsnap ~arm
 
 media-radio/svxlink ~arm
+
+=dev-java/oracle-jdk-bin-1.8.0.202 ~arm
+
