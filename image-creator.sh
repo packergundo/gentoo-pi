@@ -24,8 +24,11 @@ mount /dev/loop0p3 /mnt/gentoo
 mount /dev/loop0p1 /mnt/gentoo/boot
 echo "Removing unnecessary stuff..."
 rm -rf /mnt/gentoo/home/gundo
-rm -rf /mnt/gentoo/usr/portage/packages/*
 rm -rf /mnt/gentoo/root/*
+rm -rf /mnt/gentoo/home/pi/.bash_history
+rm -rf /mnt/gentoo/home/pi/.lesshst
+rm -rf /mnt/gentoo/home/pi/.viminfo
+rm -rf /mnt/gentoo/usr/portage/packages/*
 rm -rf /mnt/gentoo/var/log/*.gz
 echo "Overwriting stuff..."
 cp $BASEDIR/files/passwd /mnt/gentoo/etc/passwd
