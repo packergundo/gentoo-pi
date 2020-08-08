@@ -1,13 +1,13 @@
 mail-mta/postfix sasl
 www-servers/lighttpd php
-dev-lang/php cgi calendar cli crypt curl curlwrappers debug embed exif fileinfo filter flatfile gd hash iconv imap inifile intl json mhash odbc pdo phar phpdbg session simplexml sockets sqlite ssltidy tokenizer truetype unicode xml xmlreader xmlrpc xmlwriter xpm xslt zip zlib mysql apache2
+dev-lang/php cgi calendar cli crypt curl curlwrappers debug embed exif fileinfo filter flatfile gd hash iconv imap inifile intl json mhash odbc pdo phar phpdbg session simplexml sockets sqlite ssltidy tokenizer truetype unicode xml xmlreader xmlrpc xmlwriter xpm xslt zip zlib mysql
 sys-devel/distcc crossdev
 mail-client/mutt sidebar imap gpg berkdb hcache -gdbm
 net-im/pidgin -gstreamer -gtk -sasl -xscreensaver
 media-sound/mpd -ffmpeg
 net-dns/bind dlz
 app-portage/layman sync-plugin-portage git
-app-eselect/eselect-php apache2
+#app-eselect/eselect-php apache2
 # required by dev-python/ipython-5.8.0::gentoo[python_targets_python2_7]
 # required by dev-python/netaddr-0.7.19::gentoo[cli]
 # required by app-admin/ansible-9999::gentoo
