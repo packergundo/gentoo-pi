@@ -23,10 +23,8 @@ dev-java/icedtea -webstart -cups
 app-text/ghostscript-gpl cups
 sys-apps/util-linux caps
 net-fs/samba -gpg
-# required by app-admin/ansible-2.9.7::gentoo
-#>=dev-python/certifi-2019.11.28 python_targets_python3_6
-#>=dev-python/pyyaml-5.3.1 python_targets_python3_6
-#>=dev-python/cython-0.29.15 python_targets_python3_6
-#>=dev-python/setuptools-44.1.0 python_targets_python3_6
 
 dev-python/pygments python_targets_python2_7
+
+sci-geosciences/gpsd udev usb python ntp aivdm passthrough gpsclock
+#ashtech earthmate evermore fury fv18 garmin garmintxt geostar gpsclock greis isync itrax mtk3301 navcom nmea0183 nmea2000 ntrip oceanserver oncore passthrough rtcm104v2 rtcm104v3 sirf skytraq superstar2 tnt tripmate tsip ublox

@@ -30,6 +30,7 @@ rm -rf /mnt/gentoo/home/pi/.lesshst
 rm -rf /mnt/gentoo/home/pi/.viminfo
 rm -rf /mnt/gentoo/usr/portage/packages/*
 rm -rf /mnt/gentoo/var/log/*.gz
+rm -rf /mnt/gentoo/var/log/portage/*
 echo "Overwriting stuff..."
 cp $BASEDIR/files/passwd /mnt/gentoo/etc/passwd
 cp $BASEDIR/files/shadow /mnt/gentoo/etc/shadow

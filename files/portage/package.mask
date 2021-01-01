@@ -1,4 +1,4 @@
->net-libs/nodejs-8.12.0
+#>net-libs/nodejs-8.12.0
 <virtual/perl-CPAN-Meta-2.150.10-r3
 <virtual/perl-CPAN-Meta-YAML-0.18.0-r5
 <virtual/perl-Carp-1.500.0-r2
@@ -87,3 +87,5 @@
 <dev-perl/libwww-perl-6.270.0
 
 <dev-python/pygments-2.6.1
+#>sys-auth/pambase-20200304
+#>sys-libs/pam-1.3.1_p20200128-r1
