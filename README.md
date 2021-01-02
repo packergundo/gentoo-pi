@@ -5,7 +5,7 @@
 --->
 _Updated image 01-01-2021, Perl, Python, and gcc changes_
 
-There was an image update in July, but it appears I failed to upload it. I've been updating the binaries, though, including <pre>node-js</pre>. I've been trying to work on an icedtea build for this distro to move away from OracleJDK, but that hasn't worked yet.
+There was an image update in July, but it appears I failed to upload it. I've been updating the binaries, though, including `node-js`. I've been trying to work on an icedtea build for this distro to move away from OracleJDK, but that hasn't worked yet.
 
 Okay...I now have a manual kernel update to download at the bottom of the page. Process to do this...download it. Move it to `/`. `sudo su -`...you _need_ to be root. `mount /boot` -- at this point I recommend making a backup of `/boot` just in case. Then `tar -xvzf <downloaded file>`. It will overwrite /boot, except for `cmdline.txt` and `config.txt` (you _did_ back it up, right?) and install the new modules files in `/lib/modules`. Reboot, and you should have the new kernel. You can delete the downloaded file, your backup, and then all the old kernel modules if you want.
 
