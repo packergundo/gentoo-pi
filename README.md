@@ -3,7 +3,9 @@
 <!---
 <script language="javascript">document.write("Just to let you know this site is active, this page was last updated on: " + document.lastModified +". I try to release images monthly. Current image is 06-09-2018");</script>
 --->
-_Updated image 04-04-2020, Perl, Python, and gcc changes_
+_Updated image 01-01-2021, Perl, Python, and gcc changes_
+
+There was an image update in July, but it appears I failed to upload it. I've been updating the binaries, though, including <pre>node-js</pre>. I've been trying to work on an icedtea build for this distro to move away from OracleJDK, but that hasn't worked yet.
 
 Okay...I now have a manual kernel update to download at the bottom of the page. Process to do this...download it. Move it to `/`. `sudo su -`...you _need_ to be root. `mount /boot` -- at this point I recommend making a backup of `/boot` just in case. Then `tar -xvzf <downloaded file>`. It will overwrite /boot, except for `cmdline.txt` and `config.txt` (you _did_ back it up, right?) and install the new modules files in `/lib/modules`. Reboot, and you should have the new kernel. You can delete the downloaded file, your backup, and then all the old kernel modules if you want.
 
@@ -164,14 +166,16 @@ www-servers/lighttpd
 
 #### DOWNLOADS
 
-[Current Gentoo Pi Image](https://drive.google.com/file/d/1VbQC7eR2CWWJlt3Jl8p8QviIpFR3yPzQ/view?usp=sharing) 04-04-2020 This will run on both the armv6 and armv7 Pis, but I compile for the armv6 for broader compatibility. Both kernels are available.
+[Current Gentoo Pi Image](http://www.gundo.com/gentoo-pi/gentoo-pi-2021-01-01.img.bz2) 01-01-2021
 
-[Gentoo Pi Stage 4](https://drive.google.com/file/d/1d39URZOVtdjJiQEMwJN3BPsEBAiWIq9h/view?usp=sharing) 04-04-2020
+[Gentoo Pi Stage 4](http://www.gundo.com/gentoo-pi/stage4-gentoo-pi-2021-01-01.tar.bz2) 01-01-2021
 
+    current compiler upgraded to gcc-9.3.0-r2
+    default Python changed to 3.7.x
+    Perl updated to 5.30.3
+    Portage overhauled 3.0.12, eix updated
+    most other packages updated
     kernel upgrade to 4.19.80
-    current compiler upgraded to gcc-9.2.0-r2
-    default Python changed to 3.6.x
-    Perl updated to 5.30.1
 
 [4.19.80 kernel tarball](https://drive.google.com/file/d/1Etn-oEKjhxy1S4yN1JVpRi5xVl6oUua4/view?usp=sharing)
 
