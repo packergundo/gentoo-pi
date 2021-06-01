@@ -17,7 +17,7 @@ dev-lang/python sqlite
 # required by dev-python/netaddr-0.7.19::gentoo[cli]
 # required by app-admin/ansible-9999::gentoo
 # required by ansible (argument)
-net-irc/weechat PYTHON_SINGLE_TARGET: -* python2_7
+net-irc/weechat PYTHON_SINGLE_TARGET: -* python3_7
 mail-client/roundcube sqlite change-password
 dev-java/icedtea -webstart -cups
 app-text/ghostscript-gpl cups
@@ -26,5 +26,8 @@ net-fs/samba -gpg
 
 dev-python/pygments python_targets_python2_7
 
+dev-lang/mono minimal
+
 sci-geosciences/gpsd udev usb python ntp aivdm passthrough gpsclock
+
 #ashtech earthmate evermore fury fv18 garmin garmintxt geostar gpsclock greis isync itrax mtk3301 navcom nmea0183 nmea2000 ntrip oceanserver oncore passthrough rtcm104v2 rtcm104v3 sirf skytraq superstar2 tnt tripmate tsip ublox

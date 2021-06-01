@@ -73,7 +73,7 @@ games-misc/fortune-mod-simpsons-chalkboard ~arm
 games-misc/fortune-mod-tao ~arm
 games-misc/cowsay **
 =games-misc/fortune-mod-kernelcookies-9 ~arm
-#=net-irc/weechat-2.9 ~arm
+=net-irc/weechat-3.1 ~arm
 =sys-process/atop-2.3.0-r1 ~arm
 # required by whowatch (argument)
 =app-admin/whowatch-1.8.6 ~arm
@@ -111,3 +111,9 @@ media-radio/svxlink ~arm
 =dev-java/oracle-jdk-bin-1.8.0.202 ~arm
 =sys-libs/liburing-0.7 ~arm
 
+dev-java/openjdk ~arm
+=dev-java/openjdk-8.272_p10 ~arm
+=dev-java/openjdk-8.272_p10 **
+dev-java/icedtea-bin ~arm
+dev-lang/mono ~arm
+dev-dotnet/libgdiplus ~arm

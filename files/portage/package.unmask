@@ -9,7 +9,6 @@
 # Brian Evans <grknight@gentoo.org> (2019-10-01)
 # End of life.  Please upgrade.
 # Removal in 90 days. Bug 651784
-=dev-lang/php-5.6.40-r6
 =dev-lang/php-5.6.40-r7
 =app-admin/sshguard-2.3.1
 =dev-java/icedtea-3.13.0 
@@ -18,3 +17,7 @@
 
 media-radio/svxlink
 =dev-java/oracle-jdk-bin-1.8.0.202
+
+#dev-java/openjdk-bin
+=dev-java/openjdk-8.272_p10
+dev-java/icedtea-bin
