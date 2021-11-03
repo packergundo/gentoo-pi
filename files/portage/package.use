@@ -2,7 +2,7 @@ mail-mta/postfix sasl
 www-servers/lighttpd php
 dev-lang/php cgi calendar cli crypt curl curlwrappers debug embed exif fileinfo filter flatfile gd hash iconv imap inifile intl json mhash odbc pdo phar phpdbg session simplexml sockets sqlite ssltidy tokenizer truetype unicode xml xmlreader xmlrpc xmlwriter xpm xslt zip zlib mysql
 sys-devel/distcc crossdev
-mail-client/mutt sidebar imap gpg berkdb hcache -gdbm
+mail-client/mutt sidebar imap gpg berkdb hcache -gdbm gpgme
 net-im/pidgin -gstreamer -gtk -sasl -xscreensaver
 media-sound/mpd -ffmpeg
 net-dns/bind dlz
@@ -17,12 +17,17 @@ dev-lang/python sqlite
 # required by dev-python/netaddr-0.7.19::gentoo[cli]
 # required by app-admin/ansible-9999::gentoo
 # required by ansible (argument)
-net-irc/weechat PYTHON_SINGLE_TARGET: -* python3_7
+net-irc/weechat PYTHON_SINGLE_TARGET: -* python3_9
 mail-client/roundcube sqlite change-password
 dev-java/icedtea -webstart -cups
 app-text/ghostscript-gpl cups
 sys-apps/util-linux caps
 net-fs/samba -gpg
+#net-irc/weechat python_targets_python3_9
+
+>=dev-python/pyGPG-0.2 python_targets_python3_8
+
+net-libs/zeromq drafts
 
 dev-python/pygments python_targets_python2_7
 

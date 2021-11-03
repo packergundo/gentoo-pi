@@ -21,3 +21,4 @@ media-radio/svxlink
 #dev-java/openjdk-bin
 =dev-java/openjdk-8.272_p10
 dev-java/icedtea-bin
+=dev-python/websocket-client-1.2.1

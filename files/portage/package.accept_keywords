@@ -26,6 +26,7 @@ net-analyzer/tcptraceroute ~arm
 net-analyzer/tcping **
 net-analyzer/iftop ~arm
 # required by ansible (argument)
+dev-python/resolvelib ~arm
 =dev-python/pathlib-1.0.1-r1 ~arm
 =dev-python/backports-shutil_get_terminal_size-1.0.0-r1 ~arm
 =dev-python/pathlib2-2.3.2 ~arm
@@ -117,3 +118,5 @@ dev-java/openjdk ~arm
 dev-java/icedtea-bin ~arm
 dev-lang/mono ~arm
 dev-dotnet/libgdiplus ~arm
+dev-python/websocket-client ~arm **
+dev-python/ipyparallel ~arm
