@@ -24,6 +24,8 @@ app-text/ghostscript-gpl cups
 sys-apps/util-linux caps
 net-fs/samba -gpg
 #net-irc/weechat python_targets_python3_9
+media-gfx/imagemagick jpeg tiff
+virtual/imagemagick-tools tiff jpeg
 
 >=dev-python/pyGPG-0.2 python_targets_python3_8
 
