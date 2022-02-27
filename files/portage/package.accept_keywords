@@ -93,7 +93,7 @@ games-misc/fortune-mod-tao ~arm
 games-misc/fortune-mod ~arm
 games-misc/fortune-mod-kernelcookies ~arm
 games-misc/cowsay **
-=net-irc/weechat-3.3 ~arm
+=net-irc/weechat-3.4 ~arm
 =sys-process/atop-2.3.0-r1 ~arm
 # required by whowatch (argument)
 =app-admin/whowatch-1.8.6 ~arm
