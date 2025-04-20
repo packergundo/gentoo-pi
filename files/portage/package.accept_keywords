@@ -4,7 +4,7 @@ app-eselect/eselect-java ~arm
 sys-apps/baselayout-java ~arm
 dev-java/java-config ~arm
 app-misc/screenie ~arm
-sys-process/at ~arm
+=sys-process/at-3.2.5 ~arm
 =app-eselect/eselect-unison-0.4 ~arm
 net-misc/unison ~arm
 =sys-kernel/raspberrypi-sources-4.14.9999 **
@@ -15,7 +15,7 @@ media-sound/mpd
 # required by nethack (argument)
 games-roguelike/nethack ~arm
 # required by games-misc/bsd-games (argument)
-=games-misc/bsd-games-2.17-r5 **
+=games-misc/bsd-games-2.17_p28-r2 ** 
 # required by games-roguelike/rogue (argument)
 =games-roguelike/rogue-5.4.4 **
 games-engines/frotz **
@@ -27,14 +27,14 @@ net-analyzer/tcping **
 net-analyzer/iftop ~arm
 # required by ansible (argument)
 dev-python/resolvelib ~arm
-=dev-python/pathlib-1.0.1-r1 ~arm
-=dev-python/backports-shutil_get_terminal_size-1.0.0-r1 ~arm
-=dev-python/pathlib2-2.3.2 ~arm
-=virtual/python-pathlib-1.0 ~arm
+dev-python/pathlib ~arm
+dev-python/backports-shutil_get_terminal_size ~arm
+dev-python/pathlib2 ~arm
+virtual/python-pathlib ~arm
 dev-python/jedi ~arm
 dev-python/ipython_genutils ~arm
-=net-misc/sshpass-1.06 ~arm
-=dev-python/wcwidth-0.1.7-r1 ~arm
+net-misc/sshpass ~arm
+dev-python/wcwidth ~arm
 dev-python/netaddr ~arm
 dev-python/backcall ~arm
 dev-python/ipython ~arm
@@ -42,7 +42,8 @@ dev-python/pickleshare ~arm
 dev-python/prompt_toolkit ~arm
 dev-python/traitlets ~arm
 app-admin/ansible ~arm
-app-admin/ansible-base ~arm
+# move app-admin/ansible-base app-admin/ansible-core
+app-admin/ansible-core ~arm
 dev-python/parso ~arm
 # required by ansible (argument)
 # required by mmv (argument)
@@ -93,8 +94,8 @@ games-misc/fortune-mod-tao ~arm
 games-misc/fortune-mod ~arm
 games-misc/fortune-mod-kernelcookies ~arm
 games-misc/cowsay **
-=net-irc/weechat-3.4 ~arm
-=sys-process/atop-2.3.0-r1 ~arm
+=net-irc/weechat-4.4.3 ~arm
+=sys-process/atop-2.7.1-r1 ~arm
 # required by whowatch (argument)
 =app-admin/whowatch-1.8.6 ~arm
 # required by media-sound/mpd-0.21::gentoo
@@ -105,7 +106,7 @@ games-misc/cowsay **
 =www-apache/anyterm-1.1.29-r1 **
 dev-python/pyusb ~arm
 
-=app-metrics/node_exporter-0.18.1 **
+app-metrics/node_exporter **
 >=dev-util/promu-0.3.0 **
 net-analyzer/speedtest-cli ~arm
 ######### old package.keywords
@@ -129,6 +130,7 @@ app-backup/tarsnap ~arm
 media-radio/svxlink ~arm
 
 =dev-java/oracle-jdk-bin-1.8.0.202 ~arm
+=dev-java/oracle-jdk-bin-1.8.0.311 ~arm
 =sys-libs/liburing-0.7 ~arm
 
 dev-java/openjdk ~arm
@@ -140,3 +142,8 @@ dev-dotnet/libgdiplus ~arm
 dev-python/websocket-client ~arm **
 dev-python/ipyparallel ~arm
 mail-filter/opendkim ~arm
+app-admin/ansible-core ~arm
+dev-libs/rinutils ~arm
+
+#=net-firewall/xtables-addons-3.24-r1 ~arm
+=net-firewall/xtables-addons-3.24-r1 **

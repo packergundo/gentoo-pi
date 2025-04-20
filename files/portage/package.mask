@@ -1,4 +1,3 @@
-#>net-libs/nodejs-8.12.0
 <virtual/perl-CPAN-Meta-2.150.10-r3
 <virtual/perl-CPAN-Meta-YAML-0.18.0-r5
 <virtual/perl-Carp-1.500.0-r2
@@ -92,5 +91,21 @@
 =dev-java/openjdk-11.0.9_p11
 >dev-libs/libffi-compat-3.2.1-r3
 
-# masking php 8.0 for now
->=dev-lang/php-8.0
+#>net-libs/nodejs-16.21.0
+
+# blocked because tools keeps fails
+>app-admin/apache-tools-2.4.54-r3
+>www-servers/apache-2.4.54-r8
+
+# holding off on these upgrades
+>sys-libs/glibc-2.38-r9
+>sys-devel/gcc-13.2.1_p20230826
+>sys-devel/binutils-2.40-r9
+>sys-devel/binutils-config-5.5
+>sys-libs/binutils-libs-2.40-r7
+
+# protobuf-c will not compile with newer versions
+>dev-libs/protobuf-21.12
+# epiphone keeps wanting to downgrade
+<dev-lang/go-1.24.2
+>dev-python/resolvelib-1.0.1

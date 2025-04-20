@@ -3,7 +3,7 @@ www-servers/lighttpd php
 dev-lang/php cgi calendar cli crypt curl curlwrappers debug embed exif fileinfo filter flatfile gd hash iconv imap inifile intl json mhash odbc pdo phar phpdbg session simplexml sockets sqlite ssltidy tokenizer truetype unicode xml xmlreader xmlrpc xmlwriter xpm xslt zip zlib mysql
 sys-devel/distcc crossdev
 mail-client/mutt sidebar imap gpg berkdb hcache -gdbm gpgme
-net-im/pidgin -gstreamer -gtk -sasl -xscreensaver
+net-im/pidgin -gstreamer -gtk -sasl -xscreensaver -gui
 media-sound/mpd -ffmpeg
 net-dns/bind dlz
 app-portage/layman sync-plugin-portage git
@@ -17,24 +17,392 @@ dev-lang/python sqlite
 # required by dev-python/netaddr-0.7.19::gentoo[cli]
 # required by app-admin/ansible-9999::gentoo
 # required by ansible (argument)
-net-irc/weechat PYTHON_SINGLE_TARGET: -* python3_9
+#net-irc/weechat PYTHON_SINGLE_TARGET: -* python3_9
 mail-client/roundcube sqlite change-password
 dev-java/icedtea -webstart -cups
 app-text/ghostscript-gpl cups
 sys-apps/util-linux caps
 net-fs/samba -gpg
-#net-irc/weechat python_targets_python3_9
+net-irc/weechat python_single_target_python3_12
 media-gfx/imagemagick jpeg tiff
 virtual/imagemagick-tools tiff jpeg
 
->=dev-python/pyGPG-0.2 python_targets_python3_8
+>=dev-python/pyGPG-0.2 python_targets_python3_11 python_targets_python3_12
 
 net-libs/zeromq drafts
 
-dev-python/pygments python_targets_python2_7
+dev-python/pygments python_targets_python3_11 python_targets_python3_12
 
 dev-lang/mono minimal
 
 sci-geosciences/gpsd udev usb python ntp aivdm passthrough gpsclock
 
-#ashtech earthmate evermore fury fv18 garmin garmintxt geostar gpsclock greis isync itrax mtk3301 navcom nmea0183 nmea2000 ntrip oceanserver oncore passthrough rtcm104v2 rtcm104v3 sirf skytraq superstar2 tnt tripmate tsip ublox
+sys-devel/binutils gold
+
+>=dev-python/setuptools-67.6.1 python_targets_python3_11 python_targets_python3_12
+# required by dev-python/setuptools-67.6.1::gentoo
+# required by dev-util/scons-4.4.0::gentoo
+# required by sci-geosciences/gpsd-3.25::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-python/jaraco-text-3.11.1 python_targets_python3_11 python_targets_python3_12
+# required by dev-python/setuptools-67.6.1::gentoo
+# required by dev-util/scons-4.4.0::gentoo
+# required by sci-geosciences/gpsd-3.25::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-python/more-itertools-9.1.0 python_targets_python3_11 python_targets_python3_12
+# required by dev-python/setuptools-67.6.1::gentoo
+# required by dev-util/scons-4.4.0::gentoo
+# required by sci-geosciences/gpsd-3.25::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-python/nspektr-0.4.0 python_targets_python3_11 python_targets_python3_12
+# required by dev-python/setuptools-67.6.1::gentoo
+# required by dev-util/scons-4.4.0::gentoo
+# required by sci-geosciences/gpsd-3.25::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-python/ordered-set-4.1.0 python_targets_python3_11 python_targets_python3_12
+# required by dev-python/nspektr-0.4.0::gentoo
+# required by dev-python/setuptools-67.6.1::gentoo
+# required by dev-util/scons-4.4.0::gentoo
+# required by sci-geosciences/gpsd-3.25::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-python/packaging-23.0-r1 python_targets_python3_11 python_targets_python3_12
+# required by dev-python/setuptools-67.6.1::gentoo
+# required by dev-util/scons-4.4.0::gentoo
+# required by sci-geosciences/gpsd-3.25::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-python/platformdirs-3.2.0 python_targets_python3_11 python_targets_python3_12
+# required by dev-python/setuptools-67.6.1::gentoo
+# required by dev-util/scons-4.4.0::gentoo
+# required by sci-geosciences/gpsd-3.25::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-python/tomli-2.0.1-r1 python_targets_python3_11 python_targets_python3_12
+# required by dev-python/setuptools-67.6.1::gentoo
+# required by dev-util/scons-4.4.0::gentoo
+# required by sci-geosciences/gpsd-3.25::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-python/certifi-3021.3.16-r3 python_targets_python3_12
+# required by dev-python/inflect-6.0.2::gentoo
+# required by dev-python/jaraco-text-3.11.1::gentoo
+# required by dev-python/setuptools-67.6.1::gentoo
+# required by dev-util/scons-4.4.0::gentoo
+# required by sci-geosciences/gpsd-3.25::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-python/setuptools-scm-7.1.0 python_targets_python3_11 python_targets_python3_12
+# required by dev-python/httplib2-0.22.0::gentoo
+# required by app-admin/ansible-core-2.14.2::gentoo
+# required by app-admin/ansible-7.4.0::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-python/wheel-0.40.0 python_targets_python3_11 python_targets_python3_12
+# required by dev-python/paramiko-3.1.0::gentoo
+# required by app-admin/ansible-core-2.14.2::gentoo
+# required by app-admin/ansible-7.4.0::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-python/gpep517-13 python_targets_python3_11 python_targets_python3_12
+# required by dev-python/gpep517-13::gentoo
+# required by dev-python/markupsafe-2.1.2::gentoo
+# required by dev-python/jinja-3.1.2::gentoo
+# required by sys-apps/systemd-utils-252.9::gentoo
+# required by virtual/libudev-232-r7::gentoo[-systemd]
+# required by sys-apps/usbutils-015::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-python/installer-0.7.0 python_targets_python3_11 python_targets_python3_12
+# required by dev-python/wheel-0.40.0::gentoo
+# required by dev-python/markupsafe-2.1.2::gentoo
+# required by dev-python/jinja-3.1.2::gentoo
+# required by sys-apps/systemd-utils-252.9::gentoo
+# required by virtual/libudev-232-r7::gentoo[-systemd]
+# required by sys-apps/usbutils-015::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-python/flit_core-3.8.0 python_targets_python3_11 python_targets_python3_12
+# required by dev-python/pydantic-1.10.7::gentoo
+# required by dev-python/inflect-6.0.2::gentoo
+# required by dev-python/jaraco-text-3.11.1::gentoo
+# required by dev-python/setuptools-67.6.1::gentoo
+# required by dev-util/scons-4.4.0::gentoo
+# required by sci-geosciences/gpsd-3.25::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-python/typing-extensions-4.5.0 python_targets_python3_11 python_targets_python3_12
+# required by dev-python/packaging-23.0-r1::gentoo
+# required by dev-python/hatchling-1.14.0::gentoo[-test]
+# required by dev-python/hatch-vcs-0.3.0::gentoo
+# required by dev-python/termcolor-2.2.0::gentoo
+# required by app-portage/pfl-3.2-r2::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-python/pyparsing-3.0.9 python_targets_python3_11 python_targets_python3_12
+# required by dev-python/nspektr-0.4.0::gentoo
+# required by dev-python/setuptools-67.6.1::gentoo
+# required by dev-util/scons-4.4.0::gentoo
+# required by sci-geosciences/gpsd-3.25::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-python/jaraco-context-4.3.0 python_targets_python3_11 python_targets_python3_12
+# required by dev-python/nspektr-0.4.0::gentoo
+# required by dev-python/setuptools-67.6.1::gentoo
+# required by dev-util/scons-4.4.0::gentoo
+# required by sci-geosciences/gpsd-3.25::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-python/jaraco-functools-3.6.0 python_targets_python3_11 python_targets_python3_12
+# required by dev-python/jaraco-text-3.11.1::gentoo
+# required by dev-python/setuptools-67.6.1::gentoo
+# required by dev-util/scons-4.4.0::gentoo
+# required by sci-geosciences/gpsd-3.25::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-python/autocommand-2.2.2 python_targets_python3_11 python_targets_python3_12
+# required by dev-python/jaraco-text-3.11.1::gentoo
+# required by dev-python/setuptools-67.6.1::gentoo
+# required by dev-util/scons-4.4.0::gentoo
+# required by sci-geosciences/gpsd-3.25::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-python/inflect-6.0.2 python_targets_python3_11 python_targets_python3_12
+# required by dev-python/inflect-6.0.2::gentoo
+# required by dev-python/jaraco-text-3.11.1::gentoo
+# required by dev-python/setuptools-67.6.1::gentoo
+# required by dev-util/scons-4.4.0::gentoo
+# required by sci-geosciences/gpsd-3.25::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-python/pydantic-1.10.7 python_targets_python3_11 python_targets_python3_12
+# required by dev-python/pydantic-1.10.7::gentoo[native-extensions]
+# required by dev-python/inflect-6.0.2::gentoo
+# required by dev-python/jaraco-text-3.11.1::gentoo
+# required by dev-python/setuptools-67.6.1::gentoo
+# required by dev-util/scons-4.4.0::gentoo
+# required by sci-geosciences/gpsd-3.25::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-python/cython-0.29.33 python_targets_python3_11 python_targets_python3_12
+# required by dev-python/paramiko-3.1.0::gentoo
+# required by app-admin/ansible-core-2.14.2::gentoo
+# required by app-admin/ansible-7.4.0::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-python/six-1.16.0-r1 python_targets_python3_12
+# required by app-admin/ansible-core-2.14.2::gentoo
+# required by app-admin/ansible-7.4.0::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-python/jinja-3.1.2 python_targets_python3_11 python_targets_python3_12
+# required by dev-python/jinja-3.1.2::gentoo
+# required by sys-apps/systemd-utils-252.9::gentoo
+# required by virtual/libudev-232-r7::gentoo[-systemd]
+# required by sys-apps/usbutils-015::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-python/markupsafe-2.1.2 python_targets_python3_11 python_targets_python3_12
+# ansible?
+>=dev-python/flit-core-3.8.0 python_targets_python3_11 python_targets_python3_12
+
+# required by dev-lang/ruby-3.0.6-r3::gentoo
+# required by virtual/ruby-ssl-12::gentoo[ruby_targets_ruby30]
+# required by dev-ruby/racc-1.7.0::gentoo
+# required by dev-ruby/rdoc-6.5.0::gentoo[ruby_targets_ruby31]
+# required by dev-lang/ruby-3.1.4-r3::gentoo[rdoc]
+# required by dev-ruby/rubygems-3.3.26::gentoo[ruby_targets_ruby31]
+# required by virtual/rubygems-17::gentoo[ruby_targets_ruby31]
+# required by dev-ruby/kpeg-1.3.3::gentoo
+>=dev-ruby/minitest-5.18.1 ruby_targets_ruby30
+# required by dev-lang/ruby-3.0.6-r3::gentoo
+# required by virtual/ruby-ssl-12::gentoo[ruby_targets_ruby30]
+# required by dev-ruby/racc-1.7.0::gentoo
+# required by dev-ruby/rdoc-6.5.0::gentoo[ruby_targets_ruby31]
+# required by dev-lang/ruby-3.1.4-r3::gentoo[rdoc]
+# required by dev-ruby/rubygems-3.3.26::gentoo[ruby_targets_ruby31]
+# required by virtual/rubygems-17::gentoo[ruby_targets_ruby31]
+# required by dev-ruby/kpeg-1.3.3::gentoo
+>=dev-ruby/power_assert-2.0.3 ruby_targets_ruby30
+# required by dev-lang/ruby-3.0.6-r3::gentoo
+# required by virtual/ruby-ssl-12::gentoo[ruby_targets_ruby30]
+# required by dev-ruby/racc-1.7.0::gentoo
+# required by dev-ruby/rdoc-6.5.0::gentoo[ruby_targets_ruby31]
+# required by dev-lang/ruby-3.1.4-r3::gentoo[rdoc]
+# required by dev-ruby/rubygems-3.3.26::gentoo[ruby_targets_ruby31]
+# required by virtual/rubygems-17::gentoo[ruby_targets_ruby31]
+# required by dev-ruby/kpeg-1.3.3::gentoo
+>=dev-ruby/rake-13.0.6-r2 ruby_targets_ruby30
+# required by dev-ruby/typeprof-0.21.7::gentoo[ruby_targets_ruby30]
+# required by dev-lang/ruby-3.0.6-r3::gentoo
+# required by virtual/ruby-ssl-12::gentoo[ruby_targets_ruby30]
+# required by dev-ruby/racc-1.7.0::gentoo
+# required by dev-ruby/rdoc-6.5.0::gentoo[ruby_targets_ruby31]
+# required by dev-lang/ruby-3.1.4-r3::gentoo[rdoc]
+# required by dev-ruby/rubygems-3.3.26::gentoo[ruby_targets_ruby31]
+# required by virtual/rubygems-17::gentoo[ruby_targets_ruby31]
+# required by dev-ruby/kpeg-1.3.3::gentoo
+>=dev-ruby/rbs-3.0.4 ruby_targets_ruby30
+# required by dev-lang/ruby-3.0.6-r3::gentoo
+# required by virtual/ruby-ssl-12::gentoo[ruby_targets_ruby30]
+# required by dev-ruby/racc-1.7.0::gentoo
+# required by dev-ruby/rdoc-6.5.0::gentoo[ruby_targets_ruby31]
+# required by dev-lang/ruby-3.1.4-r3::gentoo[rdoc]
+# required by dev-ruby/rubygems-3.3.26::gentoo[ruby_targets_ruby31]
+# required by virtual/rubygems-17::gentoo[ruby_targets_ruby31]
+# required by dev-ruby/kpeg-1.3.3::gentoo
+>=dev-ruby/rexml-3.2.5-r1 ruby_targets_ruby30
+# required by dev-lang/ruby-3.0.6-r3::gentoo
+# required by virtual/ruby-ssl-12::gentoo[ruby_targets_ruby30]
+# required by dev-ruby/racc-1.7.0::gentoo
+# required by dev-ruby/rdoc-6.5.0::gentoo[ruby_targets_ruby31]
+# required by dev-lang/ruby-3.1.4-r3::gentoo[rdoc]
+# required by dev-ruby/rubygems-3.3.26::gentoo[ruby_targets_ruby31]
+# required by virtual/rubygems-17::gentoo[ruby_targets_ruby31]
+# required by dev-ruby/kpeg-1.3.3::gentoo
+>=dev-ruby/rss-0.2.9-r1 ruby_targets_ruby30
+# required by dev-lang/ruby-3.0.6-r3::gentoo
+# required by virtual/ruby-ssl-12::gentoo[ruby_targets_ruby30]
+# required by dev-ruby/racc-1.7.0::gentoo
+# required by dev-ruby/rdoc-6.5.0::gentoo[ruby_targets_ruby31]
+# required by dev-lang/ruby-3.1.4-r3::gentoo[rdoc]
+# required by dev-ruby/rubygems-3.3.26::gentoo[ruby_targets_ruby31]
+# required by virtual/rubygems-17::gentoo[ruby_targets_ruby31]
+# required by dev-ruby/kpeg-1.3.3::gentoo
+>=dev-ruby/test-unit-3.6.0 ruby_targets_ruby30
+# required by dev-lang/ruby-3.0.6-r3::gentoo
+# required by virtual/ruby-ssl-12::gentoo[ruby_targets_ruby30]
+# required by dev-ruby/racc-1.7.0::gentoo
+# required by dev-ruby/rdoc-6.5.0::gentoo[ruby_targets_ruby31]
+# required by dev-lang/ruby-3.1.4-r3::gentoo[rdoc]
+# required by dev-ruby/rubygems-3.3.26::gentoo[ruby_targets_ruby31]
+# required by virtual/rubygems-17::gentoo[ruby_targets_ruby31]
+# required by dev-ruby/kpeg-1.3.3::gentoo
+>=dev-ruby/typeprof-0.21.7 ruby_targets_ruby30
+# required by dev-lang/ruby-3.0.6-r3::gentoo
+# required by virtual/ruby-ssl-12::gentoo[ruby_targets_ruby30]
+# required by dev-ruby/racc-1.7.0::gentoo
+# required by dev-ruby/rdoc-6.5.0::gentoo[ruby_targets_ruby31]
+# required by dev-lang/ruby-3.1.4-r3::gentoo[rdoc]
+# required by dev-ruby/rubygems-3.3.26::gentoo[ruby_targets_ruby31]
+# required by virtual/rubygems-17::gentoo[ruby_targets_ruby31]
+# required by dev-ruby/kpeg-1.3.3::gentoo
+>=dev-ruby/bundler-2.3.26 ruby_targets_ruby30
+# required by dev-lang/ruby-3.0.6-r3::gentoo
+# required by virtual/ruby-ssl-12::gentoo[ruby_targets_ruby30]
+# required by dev-ruby/racc-1.7.0::gentoo
+# required by dev-ruby/rdoc-6.5.0::gentoo[ruby_targets_ruby31]
+# required by dev-lang/ruby-3.1.4-r3::gentoo[rdoc]
+# required by dev-ruby/rubygems-3.3.26::gentoo[ruby_targets_ruby31]
+# required by virtual/rubygems-17::gentoo[ruby_targets_ruby31]
+# required by dev-ruby/kpeg-1.3.3::gentoo
+>=dev-ruby/did_you_mean-1.6.3 ruby_targets_ruby30
+# required by dev-lang/ruby-3.0.6-r3::gentoo
+# required by virtual/ruby-ssl-12::gentoo[ruby_targets_ruby30]
+# required by dev-ruby/racc-1.7.0::gentoo
+# required by dev-ruby/rdoc-6.5.0::gentoo[ruby_targets_ruby31]
+# required by dev-lang/ruby-3.1.4-r3::gentoo[rdoc]
+# required by dev-ruby/rubygems-3.3.26::gentoo[ruby_targets_ruby31]
+# required by virtual/rubygems-17::gentoo[ruby_targets_ruby31]
+# required by dev-ruby/kpeg-1.3.3::gentoo
+>=dev-ruby/json-2.6.3 ruby_targets_ruby30
+# required by dev-lang/ruby-3.0.6-r3::gentoo[rdoc]
+# required by virtual/ruby-ssl-12::gentoo[ruby_targets_ruby30]
+# required by dev-ruby/racc-1.7.0::gentoo
+>=dev-ruby/rdoc-6.5.0 ruby_targets_ruby30
+# required by dev-ruby/rdoc-6.5.0::gentoo[ruby_targets_ruby30]
+# required by dev-lang/ruby-3.0.6-r3::gentoo[rdoc]
+# required by virtual/ruby-ssl-12::gentoo[ruby_targets_ruby30]
+# required by dev-ruby/racc-1.7.0::gentoo
+>=dev-ruby/psych-5.1.0 ruby_targets_ruby30
+# required by dev-ruby/rdoc-6.5.0::gentoo[ruby_targets_ruby30]
+# required by dev-lang/ruby-3.0.6-r3::gentoo[rdoc]
+# required by virtual/ruby-ssl-12::gentoo[ruby_targets_ruby30]
+# required by dev-ruby/racc-1.7.0::gentoo
+>=dev-ruby/kpeg-1.3.3 ruby_targets_ruby30
+# required by dev-ruby/rdoc-6.5.0::gentoo[ruby_targets_ruby30]
+# required by dev-lang/ruby-3.0.6-r3::gentoo[rdoc]
+# required by virtual/ruby-ssl-12::gentoo[ruby_targets_ruby30]
+# required by dev-ruby/rubygems-3.3.26::gentoo[ruby_targets_ruby30]
+# required by virtual/rubygems-17::gentoo[ruby_targets_ruby31]
+# required by dev-ruby/kpeg-1.3.3::gentoo
+>=dev-ruby/racc-1.7.0 ruby_targets_ruby30
+# required by dev-ruby/psych-5.1.0::gentoo[ruby_targets_ruby30]
+# required by dev-ruby/rdoc-6.5.0::gentoo[ruby_targets_ruby31]
+# required by dev-lang/ruby-3.0.6-r3::gentoo[rdoc]
+# required by virtual/ruby-ssl-12::gentoo[ruby_targets_ruby30]
+# required by dev-ruby/racc-1.7.0::gentoo
+>=dev-ruby/stringio-3.0.6 ruby_targets_ruby30
+# required by dev-ruby/rss-0.2.9-r1::gentoo[-test,ruby_targets_ruby30]
+# required by dev-lang/ruby-3.0.6-r3::gentoo
+# required by virtual/ruby-ssl-12::gentoo[ruby_targets_ruby30]
+# required by dev-ruby/racc-1.7.0::gentoo
+# required by dev-ruby/rdoc-6.5.0::gentoo[ruby_targets_ruby31]
+# required by dev-lang/ruby-3.1.4-r3::gentoo[rdoc]
+# required by dev-ruby/rubygems-3.3.26::gentoo[ruby_targets_ruby31]
+>=virtual/rubygems-17 ruby_targets_ruby30
+# required by virtual/rubygems-17::gentoo[ruby_targets_ruby30]
+# required by dev-lang/ruby-3.0.6-r3::gentoo
+# required by virtual/ruby-ssl-12::gentoo[ruby_targets_ruby30]
+# required by dev-ruby/racc-1.7.0::gentoo
+# required by dev-ruby/rdoc-6.5.0::gentoo[ruby_targets_ruby31]
+# required by dev-lang/ruby-3.1.4-r3::gentoo[rdoc]
+# required by dev-ruby/minitest-5.18.1::gentoo[ruby_targets_ruby31]
+>=dev-ruby/rubygems-3.3.26 ruby_targets_ruby30
+# required by dev-ruby/racc-1.7.0::gentoo[ruby_targets_ruby30]
+# required by dev-ruby/rdoc-6.5.0::gentoo[ruby_targets_ruby31]
+# required by dev-lang/ruby-3.0.6-r3::gentoo[rdoc]
+# required by dev-ruby/rubygems-3.3.26::gentoo[ruby_targets_ruby30]
+# required by virtual/rubygems-17::gentoo[ruby_targets_ruby31]
+# required by dev-ruby/kpeg-1.3.3::gentoo
+>=virtual/ruby-ssl-12 ruby_targets_ruby30
+>=dev-python/jaraco-collections-5.1.0 python_targets_python3_11 python_targets_python3_12
+>=dev-python/trove-classifiers-2025.3.3.18 python_targets_python3_11 python_targets_python3_12
+# required by dev-python/certifi-3024.7.22::gentoo
+# required by dev-python/requests-2.32.3::gentoo
+# required by app-portage/gemato-20.6::gentoo[gpg]
+# required by sys-apps/portage-3.0.67::gentoo[rsync-verify,-build]
+# required by portage (argument)
+>=dev-python/backports-tarfile-1.2.0 python_targets_python3_11 python_targets_python3_12
+# required by dev-python/pydantic-2.10.6::gentoo
+# required by dev-python/pydantic (argument)
+>=dev-python/annotated-types-0.7.0 python_targets_python3_11 python_targets_python3_12
+# required by dev-python/pydantic-2.10.6::gentoo
+# required by dev-python/pydantic (argument)
+>=dev-python/pydantic-core-2.27.2 python_targets_python3_11 python_targets_python3_12
+# required by dev-python/pydantic-2.10.6::gentoo
+# required by dev-python/pydantic (argument)
+>=dev-python/tzdata-10001 python_targets_python3_11 python_targets_python3_12
+# required by dev-python/pydantic-2.10.6::gentoo
+# required by dev-python/pydantic (argument)
+>=dev-python/hatch-fancy-pypi-readme-24.1.0 python_targets_python3_11 python_targets_python3_12
+# required by dev-python/hatch-fancy-pypi-readme-24.1.0::gentoo[-test]
+# required by dev-python/pydantic-2.10.6::gentoo
+# required by dev-python/pydantic (argument)
+>=dev-python/hatchling-1.27.0 python_targets_python3_12
+# required by dev-python/pydantic-core-2.27.2::gentoo
+# required by dev-python/pydantic-2.10.6::gentoo
+# required by dev-python/pydantic (argument)
+>=dev-util/maturin-1.8.2 python_targets_python3_11 python_targets_python3_12
+# required by dev-python/inflect-7.5.0::gentoo
+# required by dev-python/inflect (argument)
+>=dev-python/typeguard-4.4.2 python_targets_python3_11 python_targets_python3_12
+# required by dev-python/hatchling-1.27.0::gentoo[-test]
+# required by dev-python/hatch-vcs-0.4.0::gentoo
+# required by dev-python/termcolor-2.5.0::gentoo
+# required by dev-python/termcolor (argument)
+>=dev-python/editables-0.5 python_targets_python3_11 python_targets_python3_12
+# required by dev-python/hatchling-1.27.0::gentoo[-test]
+# required by dev-python/hatch-vcs-0.4.0::gentoo
+# required by dev-python/termcolor-2.5.0::gentoo
+# required by dev-python/termcolor (argument)
+>=dev-python/pathspec-0.12.1 python_targets_python3_11 python_targets_python3_12
+# required by dev-python/hatchling-1.27.0::gentoo[-test]
+# required by dev-python/hatch-vcs-0.4.0::gentoo
+# required by dev-python/termcolor-2.5.0::gentoo
+# required by dev-python/termcolor (argument)
+>=dev-python/pluggy-1.5.0 python_targets_python3_12

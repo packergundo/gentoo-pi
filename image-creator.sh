@@ -16,7 +16,8 @@ BASEDIR=/home/gentoo-pi
 #GENTOO=$13
 
 echo "dding .img file from SD card..."
-dd if=$1 bs=1M count=4000 of=$IMAGE
+#dd if=$1 bs=1M count=4000 of=$IMAGE
+dd if=$1 bs=1M count=8000 iflag=fullblock of=$IMAGE status=progress
 
 echo "Mounting image..."
 losetup -P /dev/loop0 $IMAGE
@@ -31,6 +32,7 @@ rm -rf /mnt/gentoo/home/pi/.viminfo
 rm -rf /mnt/gentoo/usr/portage/packages/*
 rm -rf /mnt/gentoo/var/log/*.gz
 rm -rf /mnt/gentoo/var/log/portage/*
+rm /mnt/gentoo/etc/ssh/ssh_host_*
 echo "Overwriting stuff..."
 cp $BASEDIR/files/passwd /mnt/gentoo/etc/passwd
 cp $BASEDIR/files/shadow /mnt/gentoo/etc/shadow
@@ -53,3 +55,4 @@ umount /mnt/gentoo/boot
 umount /mnt/gentoo
 losetup -D
 echo "Done!!!"
+
