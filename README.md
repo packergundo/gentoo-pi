@@ -1,9 +1,9 @@
 # Gentoo Pi
 
 <!---
-<script language="javascript">document.write("Just to let you know this site is active, this page was last updated on: " + document.lastModified +". I try to release images monthly. Current image is 06-09-2018");</script>
+<script language="javascript">document.write("Just to let you know this site is active, this page was last updated on: " + document.lastModified +". I try to release images monthly. Current image is 07-07-2025");</script>
 --->
-_Updated image 07-07-2025. Complete update to 23 profile, CHOST changes, more space in the /boot partition, kernel update and support for automatic kernel upgrades._
+_Updated image 07-07-2025. Complete update to 23.0 profile, CHOST changes, more space in the /boot partition, kernel update and support for automatic kernel upgrades._
 
 The profile has moved from 17.0 to 23.0. There was never a bridge 17.1 profile for the ARM architecture, so I had to figure out how to bridge it. That documentation will be forthcoming. In the meantime, the entire repository is now compiled for the 23.0 profile.
 
@@ -68,7 +68,6 @@ The next thing on my todo list is to build a desktop system, both a base system,
 On the base system...
 
 <pre>app-admin/logrotate
-app-admin/logrotate
 app-admin/restart-services
 app-admin/sshguard
 app-admin/sudo
