@@ -203,9 +203,9 @@ At the moment, support for nodejs and apache have both been removed.
 
 #### DOWNLOADS
 
-[Current Gentoo Pi Image](http://www.gundo.com/gentoo-pi/gentoo-pi-2025-07-07.img.bz2) 01-01-2021
+[Current Gentoo Pi Image](http://www.gundo.com/gentoo-pi/gentoo-pi-2025-07-07.img.bz2) 07-07-2025
 
-[Gentoo Pi Stage 4](http://www.gundo.com/gentoo-pi/stage4-gentoo-pi-2025-07-07.tar.bz2) 01-01-2021
+[Gentoo Pi Stage 4](http://www.gundo.com/gentoo-pi/stage4-gentoo-pi-2025-07-07.tar.bz2) 07-07-2025
 
     current compiler upgraded to gcc-14.3.0
     default Python changed to 3.12.x
