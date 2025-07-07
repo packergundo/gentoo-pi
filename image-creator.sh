@@ -17,7 +17,8 @@ BASEDIR=/home/gentoo-pi
 
 echo "dding .img file from SD card..."
 #dd if=$1 bs=1M count=4000 of=$IMAGE
-dd if=$1 bs=1M count=8000 iflag=fullblock of=$IMAGE status=progress
+#dd if=$1 bs=1M count=8000 of=$IMAGE status=progress
+dd if=$1 bs=1M of=$IMAGE status=progress
 
 echo "Mounting image..."
 losetup -P /dev/loop0 $IMAGE

@@ -95,9 +95,9 @@ games-misc/fortune-mod ~arm
 games-misc/fortune-mod-kernelcookies ~arm
 games-misc/cowsay **
 =net-irc/weechat-4.4.3 ~arm
-=sys-process/atop-2.7.1-r1 ~arm
+=sys-process/atop-2.11.0-r1 ~arm 
+=app-admin/whowatch-1.8.6-r2 ~arm
 # required by whowatch (argument)
-=app-admin/whowatch-1.8.6 ~arm
 # required by media-sound/mpd-0.21::gentoo
 # required by @selected
 # required by @world (argument)
@@ -147,3 +147,5 @@ dev-libs/rinutils ~arm
 
 #=net-firewall/xtables-addons-3.24-r1 ~arm
 =net-firewall/xtables-addons-3.24-r1 **
+
+=app-admin/sshguard-2.4.3 ~arm
