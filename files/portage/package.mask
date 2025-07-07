@@ -4,8 +4,6 @@
 =dev-java/openjdk-11.0.9_p11
 >dev-libs/libffi-compat-3.2.1-r3
 
->net-libs/nodejs-16.20.2
-
 # blocked because tools keeps fails
 >app-admin/apache-tools-2.4.54-r3
 >www-servers/apache-2.4.54-r8
@@ -21,4 +19,6 @@
 >dev-libs/protobuf-21.12
 # epiphone keeps wanting to downgrade
 <dev-lang/go-1.24.2
->dev-python/resolvelib-1.0.1
+#>dev-python/resolvelib-1.0.1
+
+#>net-libs/nodejs-16.20.2

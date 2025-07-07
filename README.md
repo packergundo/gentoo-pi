@@ -3,13 +3,15 @@
 <!---
 <script language="javascript">document.write("Just to let you know this site is active, this page was last updated on: " + document.lastModified +". I try to release images monthly. Current image is 06-09-2018");</script>
 --->
-_Updated image 01-01-2021, Perl, Python, and gcc changes_
+_Updated image 07-07-2025. Complete update to 23 profile, CHOST changes, more space in the /boot partition, kernel update and support for automatic kernel upgrades.
 
+The profile has moved from 17.0 to 23.0. There was never a bridge 17.1 profile for the ARM architecture, so I had to figure out how to bridge it. That documentation will be forthcoming. In the meantime, the entire repository is now compiled for the 23.0 profile.
+
+<!---
 There was an image update in July, but it appears I failed to upload it. I've been updating the binaries, though, including `nodejs`. I've been trying to work on an icedtea build for this distro to move away from OracleJDK, but that hasn't worked yet.
 
 Okay...I now have a manual kernel update to download at the bottom of the page. Process to do this...download it. Move it to `/`. `sudo su -`...you _need_ to be root. `mount /boot` -- at this point I recommend making a backup of `/boot` just in case. Then `tar -xvzf <downloaded file>`. It will overwrite /boot, except for `cmdline.txt` and `config.txt` (you _did_ back it up, right?) and install the new modules files in `/lib/modules`. Reboot, and you should have the new kernel. You can delete the downloaded file, your backup, and then all the old kernel modules if you want.
 
-<!---
 The binaries are being maintained, just the base image is out of date. What this means is that an update will take longer at first. But everything _is_ being kept updated. The joy of Gentoo is that since it is versionless, all this means is that your initial upgrade will take a bit longer.
 --->
 
@@ -23,7 +25,7 @@ In my opinion, a working Gentoo base system needed to function the same way. It 
 
 So...that is what I have set out to do. I have a working Gentoo Pi image, as **well** as a working Gentoo Pi Stage 4\. The stage 4 contains all the software that is on the image, but works if you don't want to copy the image over yourself, but would rather untar it to an already built card.
 
-ntp, cronie, syslog-ng, dhcpcd, vim, and various gentoo utilities are all installed, as well as distcc. The system is up to date with portage and current build flags, which were inserted for a minimal headless system. A stage 3 install does **not** have ntp, cron, syslog, or dhcp installed, all of which I wanted for a headless image.
+ntp, cronie, syslog-ng, dhcpcd, vim, wpa_supplicant, and various gentoo utilities are all installed, as well as distcc. The system is up to date with portage and current build flags, which were inserted for a minimal headless system. A stage 3 install does **not** have ntp, cron, syslog, or dhcp installed, all of which I wanted for a headless image.
 
 visudo, vipw, vigr....vim is now the preferred system editor. Use `eselect editor` if you want to revert back to nano.
 
@@ -66,24 +68,31 @@ The next thing on my todo list is to build a desktop system, both a base system,
 On the base system...
 
 <pre>app-admin/logrotate
+app-admin/logrotate
+app-admin/restart-services
 app-admin/sshguard
 app-admin/sudo
 app-admin/syslog-ng
 app-editors/nano
 app-editors/vim
+app-eselect/eselect-python
 app-misc/screen
 app-portage/eix
-app-portage/epm
 app-portage/g-cpan
 app-portage/gentoolkit
 app-portage/portage-utils
 dev-python/pip
 dev-vcs/git
 mail-mta/ssmtp
+media-libs/raspberrypi-userland
 media-sound/alsa-utils
 net-misc/dhcpcd
 net-misc/ntp
+net-wireless/wpa_supplicant
+sys-apps/busybox
 sys-devel/distcc
+sys-kernel/linux-firmware
+sys-kernel/raspberrypi-image
 sys-process/cronie
 </pre>
 
@@ -91,62 +100,84 @@ g-cpan and pip are on the base system for for Perl and Python. Note that there a
 
 And in the repo...
 
-<pre>app-admin/ansible
-app-admin/lastpass-cli
-app-admin/restart-services
+<pre>
+app-admin/ansible
+app-admin/doas
 app-admin/whowatch
+app-arch/zip
 app-crypt/gnupg
 app-editors/emacs
 app-editors/joe
+app-eselect/eselect-repository
 app-metrics/node_exporter
 app-misc/mmv
 app-misc/screenie
 app-portage/genlop
-app-portage/layman
 app-portage/pfl
-app-portage/repoman
 app-portage/ufed
+app-shells/bash
 app-shells/tcsh
 app-shells/zsh
-dev-java/oracle-jdk-bin
+app-text/dos2unix
+dev-java/openjdk-bin
 dev-lang/go
-dev-lang/php:5.6
-dev-lang/php
+dev-lang/mono
 dev-lang/ruby
-app-portage/portage-utils
+dev-lang/tcl
+dev-libs/boost
+dev-libs/json-glib
+dev-libs/libffi-compat
+dev-libs/protobuf-c
+dev-python/gst-python
 dev-python/pyusb
+dev-python/websocket-client
+dev-python/websockets
+dev-tcltk/expect
+dev-util/pkgcheck
+dev-util/pkgdev
 games-engines/frotz
 games-misc/bsd-games
 games-misc/cowsay
 games-misc/fortune-mod-all
 games-roguelike/nethack
+llvm-core/clang
 mail-client/mailx
 mail-client/mutt
 mail-client/roundcube
 mail-mta/postfix
+media-libs/gstreamer
+media-plugins/gst-plugins-meta
 media-sound/mpd
 media-sound/mpg123
+media-sound/sox
+net-analyzer/fail2ban
 net-analyzer/hping
 net-analyzer/iftop
 net-analyzer/netcat
 net-analyzer/nmap
 net-analyzer/speedtest-cli
+net-analyzer/tcpdump
 net-analyzer/tcping
 net-analyzer/tcptraceroute
 net-analyzer/traceroute
 net-dns/bind
-net-dns/bind-tools
+net-dns/dnsmasq
+net-firewall/iptables
+net-firewall/xtables-addons
 net-fs/nfs-utils
+net-fs/samba
 net-im/pidgin
 net-irc/irssi
 net-irc/weechat
-net-libs/nodejs
 net-mail/dovecot
+net-misc/bridge-utils
 net-misc/knock
 net-misc/oidentd
 net-misc/unison
 net-misc/whois
-net-wireless/wpa_supplicant
+net-vpn/tor
+net-wireless/hostapd
+net-wireless/iw
 sci-geosciences/gpsd
 sys-apps/inxi
 sys-apps/lshw
@@ -155,27 +186,40 @@ sys-apps/usbutils
 sys-auth/google-authenticator
 sys-devel/bc
 sys-devel/crossdev
+sys-kernel/genkernel
 sys-kernel/raspberrypi-sources
 sys-process/at
 sys-process/atop
 sys-process/htop
+sys-process/iotop
 sys-process/lsof
-www-apache/anyterm
+www-client/links
+www-client/lynx
 www-servers/lighttpd
+x11-libs/cairo
 </pre>
+
+At the moment, support for nodejs and apache have both been removed.
 
 #### DOWNLOADS
 
-[Current Gentoo Pi Image](http://www.gundo.com/gentoo-pi/gentoo-pi-2021-01-01.img.bz2) 01-01-2021
+[Current Gentoo Pi Image](http://www.gundo.com/gentoo-pi/gentoo-pi-2025-07-07.img.bz2) 01-01-2021
 
-[Gentoo Pi Stage 4](http://www.gundo.com/gentoo-pi/stage4-gentoo-pi-2021-01-01.tar.bz2) 01-01-2021
+[Gentoo Pi Stage 4](http://www.gundo.com/gentoo-pi/stage4-gentoo-pi-2025-07-07.tar.bz2) 01-01-2021
 
-    current compiler upgraded to gcc-9.3.0-r2
-    default Python changed to 3.7.x
-    Perl updated to 5.30.3
-    Portage overhauled 3.0.12, eix updated
+    current compiler upgraded to gcc-14.3.0
+    default Python changed to 3.12.x
+    Perl updated to 5.40.2
+    Portage updated as well
     most other packages updated
-    kernel upgrade to 4.19.80
+    kernel upgrade to 6.6.47
+    linux-firmware added for wifi support
+    wpa-supplicant added to base image
+    media-libs/raspberrypi-userland-0_pre20201022
+    sys-boot/raspberrypi-firmware-1.20240902
+    sys-kernel/raspberrypi-image-6.6.47_p20240902
+    sys-kernel/raspberrypi-sources-6.6.47_p20240902
+
 
 [4.19.80 kernel tarball](https://drive.google.com/file/d/1Etn-oEKjhxy1S4yN1JVpRi5xVl6oUua4/view?usp=sharing)
 
