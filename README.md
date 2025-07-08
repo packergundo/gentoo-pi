@@ -5,7 +5,7 @@
 --->
 _Updated image 07-07-2025. Complete update to 23.0 profile, CHOST changes, more space in the /boot partition, kernel update and support for Portage-based kernel upgrades._
 
-GentooPi will run on all architectures from the original Pi to the Pi 4. The Pi  5 still has not been tested.
+GentooPi will run on all architectures from the original Pi to the Pi5. It will run on everything through the Pi4 without modification. The Pi5 requires the following change to /boot/config.txt -- add `kernel kernel8.img` to the top of the file, using the editor of your choice.
 
 The profile has moved from 17.0 to 23.0. There was never a bridge 17.1 profile for the ARM architecture, so I had to figure out how to bridge it. That documentation will be forthcoming. In the meantime, the entire repository is now compiled for the 23.0 profile.
 
