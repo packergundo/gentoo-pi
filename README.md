@@ -5,6 +5,8 @@
 --->
 _Updated image 07-07-2025. Complete update to 23.0 profile, CHOST changes, more space in the /boot partition, kernel update and support for automatic kernel upgrades._
 
+GentooPi will run on all architectures from the original Pi to the Pi 4. The Pi  5 still has not been tested.
+
 The profile has moved from 17.0 to 23.0. There was never a bridge 17.1 profile for the ARM architecture, so I had to figure out how to bridge it. That documentation will be forthcoming. In the meantime, the entire repository is now compiled for the 23.0 profile.
 
 <!---
@@ -15,33 +17,33 @@ Okay...I now have a manual kernel update to download at the bottom of the page. 
 The binaries are being maintained, just the base image is out of date. What this means is that an update will take longer at first. But everything _is_ being kept updated. The joy of Gentoo is that since it is versionless, all this means is that your initial upgrade will take a bit longer.
 --->
 
-I've played around with the Raspberry Pi for years, and use it in many different ways at home and at work. At home, I have a Pi as my GPS time server, as my music server, as an IRC server, a web server...I think you get the hint. But up until now, I've been running Raspbian as my OS. It was the recommended OS when I started, and I didn't want to deal with any growing pains.
+I've played around with the Raspberry Pi for years, and use it in many different ways at home and at work. At home, I have a Pi as my GPS time server, as my music server, as an IRC server, a web server...I think you get the hint. But up until now, I've been running Raspberry Pi OS as my OS. It was the recommended OS when I started, and I didn't want to deal with any growing pains.
 
-However, my distro of choice is [Gentoo](http://www.gentoo.org). All my servers at home run Gentoo, regardless of how new or old they are. The control over what is installed, and the ability to upgrade in a versionless fashion is prized. So I've been split...Gentoo on the Intel boxes, and Raspbian on the Arm architecture...until now.
+However, my distro of choice is [Gentoo](http://www.gentoo.org). All my servers at home run Gentoo, regardless of how new or old they are. The control over what is installed, and the ability to upgrade in a versionless fashion is prized. So I've been split...Gentoo on the Intel boxes, and Raspberry Pi OS on the Arm architecture...until now.
 
-The process for the Raspberry Pi has been...unhelpful, to say the least. There has been allusions to images, but they are unmaintained. The NOOBS image that is out there is non-functional...the compiler doesn't work, and it requires a keyboard and monitor to get started. One of the benefits of Raspbian, IMO, is that it works out of the box **headless**. I can flash the card, fire it up, do an nmap scan, and login. The time is already set, and the system is functional. Setting it up from a Stage 3, though, requires a keyboard and monitor. No DHCP, there are some games I have to play to get a login and a shell working...so yeah...not a good way to begin, and I wanted to change that.
+The process for the Raspberry Pi has been...unhelpful, to say the least. There has been allusions to images, but they are unmaintained. The NOOBS image that is out there is non-functional...the compiler doesn't work, and it requires a keyboard and monitor to get started. One of the benefits of Raspberry Pi OS, IMO, is that it works out of the box **headless**. I can flash the card, fire it up, do an nmap scan, and login. The time is already set, and the system is functional. Setting it up from a Stage 3, though, requires a keyboard and monitor. No DHCP, there are some games I have to play to get a login and a shell working...so yeah...not a good way to begin, and I wanted to change that.
 
 In my opinion, a working Gentoo base system needed to function the same way. It needed to be able to be flashed from a Windows system (using [Win32DiskImager](http://sourceforge.net/projects/win32diskimager/)), it needed to pick up an IP addresses using DHCP, it needed to set the time, **and** the work for crossdev and distributed compilation needed to already be done on the Pi. Also, in my opinion, vi and some basic very useful Gentoo tools needed to be installed.
 
-So...that is what I have set out to do. I have a working Gentoo Pi image, as **well** as a working Gentoo Pi Stage 4\. The stage 4 contains all the software that is on the image, but works if you don't want to copy the image over yourself, but would rather untar it to an already built card.
+So...that is what I have set out to do. I have a working Gentoo Pi image, as **well** as a working Gentoo Pi Stage 4. The stage 4 contains all the software that is on the image, but works if you don't want to copy the image over yourself, but would rather untar it to an already built card.
 
 ntp, cronie, syslog-ng, dhcpcd, vim, wpa_supplicant, and various gentoo utilities are all installed, as well as distcc. The system is up to date with portage and current build flags, which were inserted for a minimal headless system. A stage 3 install does **not** have ntp, cron, syslog, or dhcp installed, all of which I wanted for a headless image.
 
 visudo, vipw, vigr....vim is now the preferred system editor. Use `eselect editor` if you want to revert back to nano.
 
-If you want to see what I installed: cat /var/lib/portage/world . Note that both images do have what was current at the time in /usr/portage -- why take the time to redownload it, especially with the tie it can take for a Pi. Since the image works best when you use my binary repo, /usr/portage contains what was used for the build on the date of the image.
+If you want to see what I installed: `cat /var/lib/portage/world`. Note that both images do have what was current at the time in /usr/portage -- why take the time to redownload it, especially with the tie it can take for a Pi. Since the image works best when you use my binary repo, /usr/portage contains what was used for the build on the date of the image.
 
 pi user is in wheel, wheel can sudo without password. dhcpd will run on boot, as it is designed to run headless.
 
-There is no root password. Login is pi:raspberry (both the same as Raspbian)
+There is no root password. Login is `pi:raspberry` (both the same as Raspberry Pi OS)
 
 If you are using the Stage 4 a FAT boot partition, a swap partition, and an ext4 3rd partition is mandatory unless you want to edit /etc/fstab and /boot/cmdline.txt in the stage 4.
 
-`mkfs.vfat -F 16 /dev/mmcblk0p1`
+`mkfs.vfat -F 16 /dev/mmcblk0p1Raspberry Pi OS
 
 `mkswap /dev/mmcblk0p2`
 
-`mkfs.ext4 -N 400000 /dev/mmcblk0p3 # it needs ~300000 inodes to install`
+`mkfs.ext4 -N 400000 /dev/mmcblk0p3` # it needs ~300000 inodes to install
 
 `mkdir gentoo`
 
