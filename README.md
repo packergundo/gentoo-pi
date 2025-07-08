@@ -39,7 +39,7 @@ There is no root password. Login is `pi:raspberry` (both the same as Raspberry P
 
 If you are using the Stage 4 a FAT boot partition, a swap partition, and an ext4 3rd partition is mandatory unless you want to edit /etc/fstab and /boot/cmdline.txt in the stage 4.
 
-`mkfs.vfat -F 16 /dev/mmcblk0p1Raspberry Pi OS
+`mkfs.vfat -F 16 /dev/mmcblk0p1`
 
 `mkswap /dev/mmcblk0p2`
 
