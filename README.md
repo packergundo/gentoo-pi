@@ -3,7 +3,7 @@
 <!---
 <script language="javascript">document.write("Just to let you know this site is active, this page was last updated on: " + document.lastModified +". I try to release images monthly. Current image is 07-07-2025");</script>
 --->
-_Updated image 07-07-2025. Complete update to 23.0 profile, CHOST changes, more space in the /boot partition, kernel update and support for automatic kernel upgrades._
+_Updated image 07-07-2025. Complete update to 23.0 profile, CHOST changes, more space in the /boot partition, kernel update and support for Portage-based kernel upgrades._
 
 GentooPi will run on all architectures from the original Pi to the Pi 4. The Pi  5 still has not been tested.
 
@@ -31,7 +31,7 @@ ntp, cronie, syslog-ng, dhcpcd, vim, wpa_supplicant, and various gentoo utilitie
 
 visudo, vipw, vigr....vim is now the preferred system editor. Use `eselect editor` if you want to revert back to nano.
 
-If you want to see what I installed: `cat /var/lib/portage/world`. Note that both images do have what was current at the time in /usr/portage -- why take the time to redownload it, especially with the tie it can take for a Pi. Since the image works best when you use my binary repo, /usr/portage contains what was used for the build on the date of the image.
+If you want to see what I installed: `cat /var/lib/portage/world`. Note that both images do have what was current at the time in /usr/portage -- why take the time to redownload it, especially with the time it can take for a Pi. Since the image works best when you use my binary repo, /usr/portage contains what was used for the build on the date of the image.
 
 pi user is in wheel, wheel can sudo without password. dhcpd will run on boot, as it is designed to run headless.
 
